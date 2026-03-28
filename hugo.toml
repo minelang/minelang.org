@@ -1,4 +1,4 @@
-baseURL = "https://minelang.org/"
+baseURL = "https://www.minelang.org/"
 languageCode = "en-us"
 contentDir = "content"
 enableEmoji = true
@@ -83,3 +83,15 @@ title = "Mine Programming Language"
   name = "Community"
   url = "https://discord.com/#"
   weight = 40
+
+[build]
+  [build.cachebusters]
+    [build.cachebusters.assets.dir]
+      command = "hugo mod get -u"
+      pattern = "^assets/.*\\.(js|ts|jsx|tsx)($|\\?)"
+    [build.cachebusters.content]
+      command = "hugo mod tidy"
+      pattern = "^content/(.*)$"
+
+[security]
+  enableInlineShortcodes = false
