@@ -1,1 +1,0 @@
-$env:Path += ';C:\Program Files\Go\bin'; cd "e:\2026\Work\Orgs\Main\Languages\Typescript\@minelang\minelang.org"; hugo server --buildDrafts --disableFastRender
