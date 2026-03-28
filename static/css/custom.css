@@ -1,0 +1,78 @@
+/* Custom global styles */
+
+/* Logo color inversion when NOT in dark mode */
+
+html[data-dark-mode] .logo-icon img{
+    filter: invert(0) !important;
+}
+
+html[data-dark-mode] .invert {
+    filter: invert(0) !important;
+}
+
+html[data-dark-mode] .sidebar-brand svg {
+    filter: invert(0) !important;
+}
+
+
+html:not([data-dark-mode]) .logo-icon img{
+    filter: invert(1) !important;
+}
+
+html:not([data-dark-mode]) .invert {
+    filter: invert(1) !important;
+}
+
+html:not([data-dark-mode]) .sidebar-brand svg {
+    filter: invert(1) !important;
+}
+
+
+.docs-content .main-content ul > li:has(>h1)::before { top: 25px; }
+.docs-content .main-content ul > li:has(>h2)::before { top: 20px; }
+.docs-content .main-content ul > li:has(>h3)::before { top: 15px; }
+.docs-content .main-content ul > li:has(>h4)::before { top: 10px; }
+.docs-content .main-content ul > li:has(>h5)::before { top: 10px; }
+.docs-content .main-content ul > li:has(>h6)::before { top: 10px; }
+
+
+.docs-content h1, .docs-content .h1 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 2rem !important;
+}
+
+.docs-content h2, .docs-content .h2 {
+    margin-bottom: 2rem !important;
+}
+
+.docs-content h3, .docs-content .h3 {
+    margin-bottom: 1.5rem !important;
+}
+
+.docs-content h4, .docs-content .h4 {
+    margin-bottom: 1rem !important;
+}
+
+.docs-content h5, .docs-content .h5 {
+    margin-bottom: 1rem !important;
+}
+
+.docs-content h6, .docs-content .h6 {
+    margin-bottom: 1rem !important;
+}
+
+.docs-content .main-content blockquote p {
+    opacity: 0.5;
+}
+
+div.code-toolbar {
+    /* min-width: fit-content; */
+    /* max-width: 800px !important; */
+}
+
+.docs-content .main-content blockquote {
+    font-size: 1rem;
+}
+
+.docs-content {
+}

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{ "/" | relURL }}">
+      <i class="fas fa-gem"></i> Mine
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ "/" | relURL }}">
+            <i class="fas fa-home"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ "/docs/" | relURL }}">
+            <i class="fas fa-book"></i> Documentation
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/minelang" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </li>
+        <li class="nav-item">
+          <div class="input-group" style="max-width: 200px;">
+            <input type="text" class="form-control form-control-sm" placeholder="Search...">
+            <button class="btn btn-outline-primary btn-sm" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="social-icons ms-3 d-flex align-items-center">
+        <a href="https://github.com/minelang" target="_blank" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" title="Twitter" style="display:none;">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

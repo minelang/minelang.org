@@ -1,0 +1,85 @@
+baseURL = "https://minelang.org/"
+languageCode = "en-us"
+contentDir = "content"
+enableEmoji = true
+enableGitInfo = false
+defaultContentLanguage = "en"
+title = "Mine Programming Language"
+
+[languages]
+  [languages.en]
+    title = "Mine Programming Language"
+    languageName = "English"
+    weight = 10
+
+[module]
+  replacements = "github.com/colinwilson/lotusdocs -> lotusdocs"
+  [[module.imports]]
+    path = "github.com/colinwilson/lotusdocs"
+    disable = false
+  [[module.imports]]
+    path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
+    disable = false
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.tableOfContents]
+    endLevel = 3
+    startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  google_fonts = [
+    ["Inter", "300, 400, 600, 700"],
+    ["Fira Code", "500, 700"]
+  ]
+
+  sans_serif_font = "Inter"
+  secondary_font  = "Inter"
+  mono_font       = "Fira Code"
+
+  [params.footer]
+    copyright = ""
+
+  [params.social]
+    github = "minelang"
+    twitter = "minelanguage"
+
+  [params.docs]
+    title           = "Mine Programming Language Documentation"
+    darkMode        = true
+    prism           = true
+    prismTheme      = "solarized-light"
+    repoURL         = "https://github.com/minelang"
+    repoBranch      = "main"
+    editPage        = true
+    lastMod         = true
+    lastModRelative = true
+    sidebarIcons    = true
+    breadcrumbs     = true
+    backToTop       = true
+    toc             = true
+    tocMobile       = true
+    scrollSpy       = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Documentation"
+  url = "/docs/"
+  weight = 20
+
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/minelang"
+  weight = 30
+
+[[menu.main]]
+  name = "Community"
+  url = "https://discord.com/#"
+  weight = 40
