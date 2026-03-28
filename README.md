@@ -38,7 +38,7 @@
 - ## Credit
 
     > [`hugo`](https://gohugo.io/) - Static site builder
-
+ 
     > [`lotusdocs`](https://lotusdocs.dev/) - Theme
 
 <!-- ╚═════════════════════════════════════════════════════════════════╝ -->
