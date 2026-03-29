@@ -201,7 +201,7 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     --danger: var(--red);
     --light: var(--gray-100);
     // --dark: #0e1420;
-    --dark: #181921;
+    --dark: #131418;
     // --dark: #241c2d;
     --dark-alt: #212529;
     --dark-secondary: #292a35;
@@ -351,7 +351,8 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     // sidebar
     --sidebar-primary: var(--primary-300);
     --sidebar-bg: var(--dark);
-    --top-header-bg: hsla(233,16%,11%,0.8);
+    --top-header-bg: hsla(228, 12%, 8%, 0.8);
+
     --sidebar-text-color: #b6bbc9;
     --sidebar-border-color: var(--gray-900);
     --sidebar-dropdown-hover-bg: #2b303b;
