@@ -1,6 +1,21 @@
-resources/_gen
-public/
-public/*
-resources/*
-.hugo_build.lock
-run.cmd
+# Hugo
+/public/
+/resources/
+*.lock
+
+# Build outputs
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# dependencies
+node_modules/
