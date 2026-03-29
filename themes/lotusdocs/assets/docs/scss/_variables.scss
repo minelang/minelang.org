@@ -97,6 +97,28 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     --emerald-100-hsl: 149, 89%, 82%;
     --emerald-50-hsl: 145, 100%, 94%;
 
+    --black-900-hsl: 0, 0%, 5%;
+    --black-800-hsl: 0, 0%, 12%;
+    --black-700-hsl: 0, 0%, 18%;
+    --black-600-hsl: 0, 0%, 25%;
+    --black-500-hsl: 0, 0%, 32%;
+    --black-400-hsl: 0, 0%, 42%;
+    --black-300-hsl: 0, 0%, 55%;
+    --black-200-hsl: 0, 0%, 70%;
+    --black-100-hsl: 0, 0%, 82%;
+    --black-50-hsl: 0, 0%, 93%;
+
+    --white-900-hsl: 0, 0%, 93%;
+    --white-800-hsl: 0, 0%, 82%;
+    --white-700-hsl: 0, 0%, 70%;
+    --white-600-hsl: 0, 0%, 55%;
+    --white-500-hsl: 0, 0%, 42%;
+    --white-400-hsl: 0, 0%, 32%;
+    --white-300-hsl: 0, 0%, 25%;
+    --white-200-hsl: 0, 0%, 18%;
+    --white-100-hsl: 0, 0%, 12%;
+    --white-50-hsl: 0, 0%, 5%;
+
     --blue-900: hsl(var(--blue-900-hsl));
     --blue-800: hsl(var(--blue-800-hsl));
     --blue-700: hsl(var(--blue-700-hsl));
@@ -185,6 +207,28 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     --emerald-100: hsl(var(--emerald-100-hsl));
     --emerald-50: hsl(var(--emerald-50-hsl));
 
+    --black-900: hsl(var(--black-900-hsl));
+    --black-800: hsl(var(--black-800-hsl));
+    --black-700: hsl(var(--black-700-hsl));
+    --black-600: hsl(var(--black-600-hsl));
+    --black-500: hsl(var(--black-500-hsl));
+    --black-400: hsl(var(--black-400-hsl));
+    --black-300: hsl(var(--black-300-hsl));
+    --black-200: hsl(var(--black-200-hsl));
+    --black-100: hsl(var(--black-100-hsl));
+    --black-50: hsl(var(--black-50-hsl));
+
+    --white-900: hsl(var(--white-900-hsl));
+    --white-800: hsl(var(--white-800-hsl));
+    --white-700: hsl(var(--white-700-hsl));
+    --white-600: hsl(var(--white-600-hsl));
+    --white-500: hsl(var(--white-500-hsl));
+    --white-400: hsl(var(--white-400-hsl));
+    --white-300: hsl(var(--white-300-hsl));
+    --white-200: hsl(var(--white-200-hsl));
+    --white-100: hsl(var(--white-100-hsl));
+    --white-50: hsl(var(--white-50-hsl));
+
     --blue: var(--blue-500);
     --green: var(--green-500);
     --red: var(--red-500);
@@ -193,6 +237,8 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
     --cardinal: var(--cardinal-500);
     --magenta: var(--magenta-500);
     --emerald: var(--emerald-500);
+    --black: var(--black-500);
+    --white: var(--white-500);
 
     --secondary: var(--gray-600);
     --success: var(--green);

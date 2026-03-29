@@ -50,8 +50,9 @@ title = "Mine Programming Language"
   [params.docs]
     title           = "Mine Programming Language Documentation"
     darkMode        = true
+    themeColor      = "black"
     prism           = true
-    prismTheme      = "solarized-light"
+    prismTheme      = "vsc-dark-plus"
     repoURL         = "https://github.com/minelang"
     repoBranch      = "main"
     editPage        = true

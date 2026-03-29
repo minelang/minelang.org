@@ -1,15 +1,10 @@
-const globalDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 const localMode = localStorage.getItem('theme');
 
-if (globalDark && (localMode === null)) {
+// Default to dark theme
+if (localMode === null) {
   localStorage.setItem('theme', 'dark');
   document.documentElement.setAttribute('data-dark-mode', '');
-}
-
-if (globalDark && (localMode === 'dark')) {
+} else if (localMode === 'dark') {
   document.documentElement.setAttribute('data-dark-mode', '');
 }
-
-if (localMode === 'dark') {
-  document.documentElement.setAttribute('data-dark-mode', '');
-}
+// If localMode === 'light', do nothing (no dark-mode attribute)

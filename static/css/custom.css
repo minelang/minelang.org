@@ -1,5 +1,12 @@
 /* Custom global styles */
+:root{
+    --prism-code-bg: #1a1b1b !important;
+}
 
+pre code {
+    background: transparent !important;
+    padding: 0px 1rem 1rem !important;
+}
 /* Logo color inversion when NOT in dark mode */
 
 html[data-dark-mode] .logo-icon img{
@@ -112,7 +119,24 @@ footer {
 }
 
 /* Mobile social icons */
+.desktop-only {
+    display: flex;
+}
+.mobile-only {
+    display: none !important;
+}
 @media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    .social-icons a > div {
+        display: none !important;
+    }
+
+    .mobile-only {
+        display: flex !important;
+    }
     .btn.btn-icon {
         height: 25px;
         width: 25px;
@@ -150,6 +174,8 @@ footer {
         gap: 0.5rem !important;
     }
 
+    
+
     .social-icons svg {
         width: 16px !important;
         height: 16px !important;
@@ -158,4 +184,10 @@ footer {
     .social-icons .divider {
         height: 16px !important;
     }
+}
+
+
+
+.desktop-only {
+
 }
