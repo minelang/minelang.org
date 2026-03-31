@@ -5,9 +5,19 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        ".vscode": true
+        ".vscode": true,
+        "public": true,
+        "resources": true,
+        "archetypes": true,
+        ".github": true,
+        ".hugo_build.lock": true
     },
     "hide-files.files": [
-        ".vscode"
+        ".vscode",
+        "public",
+        "resources",
+        "archetypes",
+        ".github",
+        ".hugo_build.lock"
     ]
 }

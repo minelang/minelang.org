@@ -1,14 +1,14 @@
 ---
-title: MVP Syntax Stage
+title: tscore/syntax
 description: Mine MVP (Syntax Stage)
 icon: keyboard_keys
-weight: 1
+weight: 3
 ---
 
 
 >  `current-stage`
 >
-> _from **28/3/2026** to **now**._
+> _from **31/3/2026** to **now**._
 
 
 ---
@@ -61,9 +61,9 @@ weight: 1
     ┗ ..
     ```
 
-> As we can see in the previous structure. The core only contains syntax so far.
+> As shown in the previous structure, the core currently only contains syntax.
 >
-> This is obvious. everything that will be built later needs this foundation to function.
+> This is obvious: everything built later will need this foundation to function.
 
 ---
 
@@ -89,8 +89,8 @@ weight: 1
             name    : 'Mine',
             version : '0.1.0',
 
-            // we pass the lexer here, so we can re-use it
-            // without re-create a new one every time       (Important for Performance)
+            // we pass the lexer here so we can reuse it
+            // without recreating a new one each time       (Important for Performance)
             lexer   : MineLexer,
 
             // parser rules
@@ -129,11 +129,11 @@ weight: 1
 
         ```ts
         // MineSyntax starts with `Program` node.
-        // in this example I want to parse the source directly as literal
-        // the expression includes the literals which includes the numbers(hex)
+        // In this example, I want to parse the source directly as a literal.
+        // The expression includes literals, which include numbers (hex, etc.);
         //
         // I can do it by using `from('rule')`
-        // so the ast will start directly from the target node and not full program.
+        // so the AST will start directly from the target node instead of the full program.
         const ExprSyntax = MineSyntax.from('Expr')
 
         // now use it like this
@@ -158,9 +158,9 @@ weight: 1
 
         - #### NOTES
 
-            > I have done this language many times before, I did it tons of times.
+            > I have built this language many times before.
             >
-            > This time I can see the full picture in so good/organized/optimized way.
+            > This time I can see the full picture in such a good, organized, and optimized way.
 
             > In the past, I let the syntax errors come from parser_pkg(so basic), and then in analyzer_pkg
             >
@@ -191,58 +191,58 @@ weight: 1
 
     - ##### Mine Tests
 
-        > well.. this is the most excited part here.
+        > Well, this is the most exciting part here.
         >
-        > for now, i need to test every signle case to ensure this syntax is what really i want.
+        > For now, I need to test every single case to ensure this syntax is what I really want.
         >
-        > and since i dont have any special syntax in my head right now..
+        > And since I don't have any special syntax in mind right now...
         >
-        > so i will just try exploring the syntax world, not the language, not the compiler, not lexer or parser.
+        > I will focus on exploring the syntax world itself, not the language, not the compiler, not the lexer or parser.
         >
-        > in another words, lets imagine the syntax i'm talking about it is a way to ensure that is the machine understand the code i wrote.
+        > In other words, let's imagine the syntax I'm describing as a way to ensure the machine understands the code I wrote.
         >
-        > i want to ensure that is 100% understand what i'm understanding as a human.
+        > I want to ensure the machine 100% understands what I understand as a human.
         >
-        > the `0x1Apkg` example is great, as a human i know :
+        > The `0x1Apkg` example is great. As a human, I know:
 
-        - **Hex** start with `0x`.
+        - **Hex** starts with `0x`.
 
         - `pkg` is a word, not part of 0x1A.
 
-        > most language translate it diffrently, i don't care, i have my own rules.
+        > Most languages translate it differently, but I don't care—I have my own rules.
         >
-        > The Big Rule here is **Machine understand what I mean and confirms it**.
+        > The main rule here is: **The machine understands what I mean and confirms it.**
 
-        > so the program will say "yeah, the user did something worng here"
+        > So the program will say "yeah, the user did something wrong here."
         >
-        > i know this is basic idea, but the idea is all of that will happend before any parse, before any ast generation or walks in nodes.
+        > I know this is a basic idea, but the main point is that all of this will happen before any parsing, before any AST generation or node traversal.
 
-        - #### Why This is Metter for me ?
+        - #### Why Is This Important for Me?
 
-            > i will write `Mine(MVP)` in `Typescript`.
+            > I will write `Mine(MVP)` in `TypeScript`.
             >
-            > then i will write `Mine` in `Mine(MVP)`.
+            > Then I will write `Mine` in `Mine(MVP)`.
             >
-            > this maybe looks easy for u, but i did it many times before,
+            > This might look easy to you, but I've done it many times before.
             >
-            > and i know if we dont have a solid base we cant bootsrap
+            > I know if we don't have a solid foundation, we can't bootstrap properly.
 
-            > maybe we can, but what about tech-depts after that?
+            > Maybe we can, but what about technical debt afterward?
             >
-            > i'm lucky, not my first time, this is a trip,
+            > I'm lucky; this is not my first time. This is a journey.
             >
-            > "I WROTE PROGRAMMING LANGUAGE IN 3 DAYS"
+            > "I WROTE A PROGRAMMING LANGUAGE IN 3 DAYS"
             >
-            > then
+            > And then...
             >
-            > "I SPENT 100yrs with 1m ppl with +100B$ cost to fix that xD
+            > "I SPENT 100 years with 1 million people and +100B$ cost to fix it xD"
 
 
-        > i was say something, but i forgot, however,
+        > I was going to say something, but I forgot.
         >
-        > in `./src/core/syntax/test/rules/` folder we have `help.ts` file
+        > In the `./src/core/syntax/test/rules/` folder, we have a `help.ts` file.
         >
-        > with some magic, it enables me to create test file like `./src/core/syntax/test/rules/expr/lit_int.test.ts` :
+        > With some clever logic, it enables me to create test files like `./src/core/syntax/test/rules/expr/lit_int.test.ts`:
 
         ```ts
         import { Node }          from '../../../mod/ast';
@@ -251,19 +251,16 @@ weight: 1
         // Tests
         const cases = {
 
-            // we pass the input
-            // we set the expected status at success
-            // output, if success == true is AST node (can be any node(program/stmt/expr/...))
-            // if not, so output is errors array.
-
-            LiteralIntMustSucceed : [
-                {
+            // Pass the input
+            // Set the expected status to success or failure
+            // output: if success == true, output is an AST node (can be any node: program/stmt/expr/...)
+            // if not, output is an errors array.
                     input       : '0x1A',
                     success     : true,
 
-                    // using this way, i can see how each letter is represented in my AST.
-                    // this is a feature for me (the language creator)
-                    // it help me a lot to save it in my head (hard to forget).
+                    // Using this approach, I can see how each character is represented in the AST.
+                    // This helps me (the language creator) to remember it better.
+                    // It's a valuable reference that's hard to forget.
                     output      : Node.intLit({ start: 0, end: 4 }, BigInt('26'), '0x1A', 'hex'),
                 },
             ],
@@ -272,17 +269,18 @@ weight: 1
                 {
                     input       : '0x1Apkg',
                     success     : false,
-                    // Why it false?
+                    // Why is it false?
                     //
-                    // - the program know, user want hex,    (we dont care what user want by writing `pkg`, we read one-by-one token from start to end.
-                    //                                        i need to understand the first firstly, to understand the second!)
+                    // - The program knows the user wanted hex. We don't care what the user meant by writing `pkg`.
+                    //   We read tokens one by one from start to end. I need to understand the first token
+                    //   before understanding the second one.
                     //
-                    // - so the program will return an error (if in lsp, u will have auto fix options,
-                    //                                        like `0x1A pkg` or `0x1A` and remove `pkg` and so on, not decided yet..)
+                    // - So the program will return an error. In LSP, you will have auto-fix options,
+                    //   like `0x1A pkg`, `0x1A`, or removing `pkg`, etc. (not yet decided).
 
-                    // same here,
-                    // i can see each error, thinking about it, understanding why/when it happen more better.
-                    // and also in same way i will save it in my head!
+                    // Same approach here:
+                    // I can see each error and understand why/when it happens, which is better.
+                    // I also remember it this way!
                     output      : [
                         {
                             code    : 'SYNTAX_ERROR',
@@ -297,8 +295,8 @@ weight: 1
 
         // Run tests
         // - a shortcut implemented in `help.ts` file
-        // - to short the create syntax process i told u about above.
-        // - and then run all cases using that syntax.
+        // - to simplify the syntax creation process I mentioned above
+        // - and then run all test cases using that syntax
         grammarTest('Expr', cases);
         ```
 
@@ -315,9 +313,9 @@ weight: 1
         0 fail
         ```
 
-        > **Note:** `hmm` is a special package manager, made for me, my projects, my enviroments, to make my life easier.
+        > **Note:** `hmm` is a special package manager, created for me and my projects in my environments, to make my life easier.
         >
-        > for now its just wrapper for `bun`, so u can use `bun` directly.
+        > For now, it's just a wrapper for `bun`, so you can use `bun` directly.
 
         ---
 
@@ -326,15 +324,9 @@ weight: 1
 
 - ## Progress
 
-    | Type     | Status |
-    | -------- | ------ |
-    | literals | 1%     |
-    | ...      | 0%     |
-
-    | Expression | Status |
-    | ---------- | ------ |
-    | ...        | 0%     |
-
-    | Statement | Status |
-    | --------- | ------ |
-    | ...       | 0%     |
+    | Target      | Coverage |
+    | ----------- | -------- |
+    | Comments    | 0%       |
+    | Types       | 0%       |
+    | Expressions | 0%       |
+    | Statements  | 0%       |
