@@ -1,5 +1,7 @@
 /* Custom global styles */
 :root{
+    --body-bg: #16161a;
+    --sidebar-bg: #16161a;
     --prism-code-bg: #1a1b1b !important;
     --content-link-color: var(--blue-300);
     --top-header-bg: hsl(240, 8%, 9%, 0.8);
