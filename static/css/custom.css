@@ -69,36 +69,31 @@ hr {
 }
 
 .docs-content h3, .docs-content .h3 {
-    font-size: calc(1.3rem);
+    font-size: calc(1.3rem) !important;
     margin-bottom: 0.5rem !important;
 }
 
 .docs-content h4, .docs-content .h4 {
-    margin-bottom: 0.5rem !important;
+    font-size: calc(1rem) !important;
+    margin-bottom: 0rem !important;
 }
 
 .docs-content h5, .docs-content .h5 {
-    margin-bottom: 0.5rem !important;
+    font-size: calc(0.9rem) !important;
+    margin-bottom: 0rem !important;
 }
 
 .docs-content h6, .docs-content .h6 {
-    margin-bottom: 0.5rem !important;
+    font-size: calc(0.8rem) !important;
+    margin-bottom: 0rem !important;
 }
 
 .docs-content .main-content blockquote p {
     opacity: 0.5;
 }
 
-div.code-toolbar {
-    /* min-width: fit-content; */
-    /* max-width: 800px !important; */
-}
-
 .docs-content .main-content blockquote {
     font-size: 1rem;
-}
-
-.docs-content {
 }
 
 /* Index page styles */
@@ -195,11 +190,6 @@ footer {
     }
 }
 
-
-.desktop-only {
-
-}
-
 .docs-content .main-content code {
     font-size: 80% !important;
 }
@@ -218,4 +208,8 @@ main.page-content footer:has(.container-fluid) {
 
 a .card-body.py-2 {
     align-content: center;
+}
+
+.docs-toc toc > div {
+    display: none !important;
 }
