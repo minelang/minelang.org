@@ -1,6 +1,8 @@
 ---
 title: Learn
-description: Read it to learn Mine.
+description: hmm..
 icon: school
 weight: 2
 ---
+
+> Not yet.
