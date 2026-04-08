@@ -11,15 +11,15 @@
         "archetypes": true,
         ".github": true,
         ".hugo_build.lock": true,
-        "themes": true,
         ".gitignore": true,
         ".gitmodules": true,
         "go.mod": true,
         "go.sum": true,
         "hugo.toml": true,
         "README.md": true,
-        "layouts": true,
-        "assets": true
+        "assets": true,
+        "themes": true,
+        "layouts": true
     },
     "hide-files.files": [
         ".vscode",
@@ -28,14 +28,14 @@
         "archetypes",
         ".github",
         ".hugo_build.lock",
-        "themes",
         ".gitignore",
         ".gitmodules",
         "go.mod",
         "go.sum",
         "hugo.toml",
         "README.md",
-        "layouts",
-        "assets"
+        "assets",
+        "themes",
+        "layouts"
     ]
 }
