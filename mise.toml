@@ -1,0 +1,6 @@
+[tools]
+go = "latest"
+hugo-extended = "0.161.1"
+
+[tasks.run]
+run = "hugo server"
