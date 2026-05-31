@@ -29,7 +29,9 @@ weight: 112
     /// @error <OverflowError>  the sum exceeds the maximum f32 value
     ///
     /// @return     the sum of x and y
-    pub fn sum(x: f32, y: f32) { OverflowError }!f32
+    pub fn sum(x: f32, y: f32) { OverflowError }!f32 {
+        // ...
+    }
     ```
 
     ```mine
