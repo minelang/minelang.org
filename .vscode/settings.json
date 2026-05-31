@@ -6,7 +6,6 @@
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         ".vscode": true,
-        "public": true,
         "resources": true,
         "archetypes": true,
         ".github": true,
@@ -17,13 +16,14 @@
         "go.sum": true,
         "hugo.toml": true,
         "README.md": true,
+        "layouts": true,
+        "public": true,
         "assets": true,
         "themes": true,
-        "layouts": true
+        "static": true
     },
     "hide-files.files": [
         ".vscode",
-        "public",
         "resources",
         "archetypes",
         ".github",
@@ -34,8 +34,10 @@
         "go.sum",
         "hugo.toml",
         "README.md",
+        "layouts",
+        "public",
         "assets",
         "themes",
-        "layouts"
+        "static"
     ]
 }

@@ -5,6 +5,30 @@
     --prism-code-bg: #1a1b1b !important;
     --content-link-color: var(--blue-300);
     --top-header-bg: hsl(240, 8%, 9%, 0.8);
+
+    /* --mine-border-color: #a58a5975;
+    --mine-border-hover-color: #d4b98875;
+    --sidebar-border-color: var(--mine-border-color);
+    --card-border-color: var(--mine-border-color);
+    --card-border-hover-color: var(--mine-border-hover-color); */
+}
+
+table {
+    border-color: var(--card-border-color);
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1rem !important;
+}
+
+.docs-content .main-content blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: none !important;
+    padding-left: 0rem !important;
+}
+
+.doc-hr {
+    border-top: 1px solid var(--mine-border-color);
 }
 
 pre code {
@@ -58,34 +82,36 @@ html:not([data-dark-mode]) svg:has(image) {
 
 .docs-content h1, .docs-content .h1 {
     margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
+
+    /* TODO: udpate it in the main theme repo */
+    margin-bottom: 1.8rem !important;
 }
 
 hr {
     margin-bottom: 2rem !important;
 }
 .docs-content h2, .docs-content .h2 {
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content h3, .docs-content .h3 {
     font-size: calc(1.3rem) !important;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content h4, .docs-content .h4 {
     font-size: calc(1rem) !important;
-    margin-bottom: 0rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content h5, .docs-content .h5 {
     font-size: calc(0.9rem) !important;
-    margin-bottom: 0rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content h6, .docs-content .h6 {
     font-size: calc(0.8rem) !important;
-    margin-bottom: 0rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content .main-content blockquote p {
@@ -212,4 +238,9 @@ a .card-body.py-2 {
 
 .docs-toc toc > div {
     display: none !important;
+}
+
+ul > li:last-child,
+ol > li:last-child {
+    margin-bottom: 1rem;
 }
