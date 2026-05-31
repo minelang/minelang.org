@@ -2,7 +2,7 @@
 title: fn
 description: Function declarations with optional error handling.
 icon: resume
-weight: 122
+weight: 123
 ---
 
 > `fn` declares a function that executes a block of statements and optionally returns a value.
