@@ -18,7 +18,7 @@ weight: 151
         var x = 10
         var y = 20
 
-        @println(x + y)
+        @printn(x + y)
     }
     ```
     ---
@@ -33,5 +33,5 @@ weight: 151
     }
 
     // error: value is not visible here
-    @println(value)
+    @printn(value)
     ```
