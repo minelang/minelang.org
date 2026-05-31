@@ -16,7 +16,7 @@ weight: 146
     errdefer { /* multiple statements */ }
     ```
 
-    > Like `defer`, multiple `errdefer` statements execute in reverse order (LIFO).
+    > Like [`defer`](./defer), multiple `errdefer` statements execute in reverse order (LIFO).
 
     ---
 
@@ -59,7 +59,7 @@ weight: 146
 
 - ### Notes
 
-    > `errdefer` triggers on any error exit (via `fail` or propagated errors from `try`).
+    > `errdefer` triggers on any error exit (via [`fail`](./fail) or propagated errors from [`try`](../expressions/try_catch)).
     >
     > Scope-aware: only applies from its declaration to the end of the block.
     >

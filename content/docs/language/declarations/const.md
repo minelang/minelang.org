@@ -16,11 +16,11 @@ weight: 122
     ```
 
     > [`pub`](../keywords/comptime) and [`comptime`](../keywords/comptime) are optional.
-
+    >
     > Type annotation (`: type`) is optional if an initial value is provided.
-
+    >
     > Initial value (`= expr`) is optional if a type is provided.
-
+    >
     > Both type and value cannot be omitted (at least one must be specified).
 
     ---

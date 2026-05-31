@@ -19,7 +19,7 @@ table {
     font-size: 1.25rem;
 }
 
-.docs-content .main-content blockquote:not(:has(p:nth-of-type(3))) {
+.docs-content .main-content blockquote:not(:has(p:nth-of-type(2))) {
     border-left: none !important;
     padding-left: 0rem !important;
 }

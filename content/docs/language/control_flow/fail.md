@@ -5,7 +5,7 @@ icon: close
 weight: 142
 ---
 
-> `fail` exits the current function with an error value. The function's return type must include an error union (`!`).
+> `fail` exits the current function with an error value. The function's return type must include an error annotation (`!T` or `errset!T`).
 
 ---
 
@@ -15,7 +15,7 @@ weight: 142
     fail ErrorName
     ```
 
-    > `ErrorName` must be a member of the function's error set (inferred or explicit).
+    > `ErrorName` must be a member of the function's [`errset`](../types/errset) (inferred or explicit).
 
     ---
 

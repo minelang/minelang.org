@@ -18,9 +18,9 @@ weight: 132
     ```
 
     > The condition (`cond`) is a boolean expression.
-
+    >
     > The continue expression (`:expr`) is optional.
-
+    >
     > `:expr` can be `:(expr)`.
 
     ---
