@@ -50,7 +50,7 @@ weight: 133
 
 - ### Notes
 
-    > Use [break](/docs/language/control_flow/break/) to exit early. [continue](/docs/language/control_flow/continue/) to skip to the next iteration.
+    > Use [`break`](/docs/language/control_flow/break/) to exit early. [`continue`](/docs/language/control_flow/continue/) to skip to the next iteration.
 
     > Ranges work in both directions (forward and backward).
 

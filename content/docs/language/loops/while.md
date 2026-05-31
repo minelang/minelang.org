@@ -12,16 +12,16 @@ weight: 132
 - ### Syntax
 
     ```mine
-    while cond : expr {
+    while cond :expr {
         // ...
     }
     ```
 
-    > `cond` is a boolean expression.
+    > The condition (`cond`) is a boolean expression.
 
-    > `: expr` is optional.
+    > The continue expression (`:expr`) is optional.
 
-    > `expr` can be `(expr)`.
+    > `:expr` can be `:(expr)`.
 
     ---
 
@@ -46,6 +46,6 @@ weight: 132
 
 - ### Notes
 
-    > Use [break](/docs/language/control_flow/break/) to exit the loop early.
+    > Use [`break`](/docs/language/control_flow/break/) to exit the loop early.
     >
-    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration. the continue expression runs after each `continue`.
+    > Use [`continue`](/docs/language/control_flow/continue/) to skip to the next iteration. the continue expression runs after each `continue`.
