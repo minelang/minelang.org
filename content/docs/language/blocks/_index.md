@@ -1,10 +1,8 @@
 ---
 title: Blocks
-description: Structural elements for organizing code into groups and regions.
+description: Structural elements for grouping and organizing code.
 icon: tile_medium
 weight: 150
 ---
 
-> Blocks are fundamental structural elements used to group statements and organize code.
->
-> Mine provides two mechanisms: scoped blocks (enclosed in braces) for grouping statements with local scope, and sections (named regions) for dividing large files into logically organized areas.
+> Mine has two block types: `{}` blocks create a new scope, and sections (e.g. `╔═ X ═╗`) are visual separators for readability with no effect on scope or execution.

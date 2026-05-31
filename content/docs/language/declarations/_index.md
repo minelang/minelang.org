@@ -1,8 +1,8 @@
 ---
 title: Declarations
-description: Variables, constants, and function declarations.
+description: Introduce named bindings into scope.
 icon: flag
 weight: 120
 ---
 
-> Declarations introduce new names and bindings in Mine. This section covers variables (`var`), constants (`const`), and functions (`fn`).
+> Mine has three declaration forms: `var` for mutable variables, `const` for immutable constants, and `fn` for functions.

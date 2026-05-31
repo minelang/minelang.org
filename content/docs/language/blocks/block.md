@@ -1,13 +1,11 @@
 ---
 title: block
-description: Scoped groups of statements enclosed in braces.
+description: Scoped sequence of statements enclosed in braces.
 icon: data_object
 weight: 151
 ---
 
-> A block is a scoped sequence of statements enclosed in braces.
->
-> Blocks are used whenever multiple statements must be grouped together as a single unit.
+> Groups statements into a single unit with its own scope. Variables declared inside are not visible outside. Blocks are used in functions, loops, and anywhere a scoped unit is needed.
 
 ---
 

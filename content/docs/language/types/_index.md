@@ -1,8 +1,8 @@
 ---
 title: Types
-description: Structured types, arrays, pointers, and optionals.
-icon: contrast_square
+description: Define the shape and behavior of values.
+icon: category
 weight: 179
 ---
 
-> Types define the structure and shape of data in Mine. This section covers user-defined types and their characteristics.
+> Mine's type system includes primitives, structs, arrays, pointers, optionals, ..., and error annotations for safe, expressive data modeling.

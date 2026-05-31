@@ -1,12 +1,8 @@
 ---
 title: Comments
-description: Explore file, documentation, and line comment types in Mine.
+description: Annotate source code with notes the compiler ignores.
 icon: comment
 weight: 110
 ---
 
-> Comments have no effect on program execution.
->
-> They are used for code documentation, organization, and file-level metadata.
->
-> Mine language server (**MLS**) may use them to provide enhanced editor features such as hover information and contextual help.
+> Mine supports three comment types: line comments (`//`), doc comments (`///`), and file comments (`#`) for module-level documentation.

@@ -1,11 +1,11 @@
 ---
 title: var
-description: Mutable variable declarations.
-icon: deployed_code
+description: Mutable variable declaration.
+icon: variable_add
 weight: 121
 ---
 
-> `var` declares a mutable variable that can be reassigned after initialization.
+> Declares a named binding that can be reassigned after initialization. Supports type inference, optional initial values, and `pub`/`comptime` modifiers.
 
 ---
 

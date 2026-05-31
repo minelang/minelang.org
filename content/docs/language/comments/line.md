@@ -1,13 +1,12 @@
 ---
 title: Line Comment
-description: Line comments used for explanations and clarifications within code.
-icon: minus
+description: A comment that spans a single line.
+icon: comment
 weight: 113
 ---
 
-> Line comments are used to annotate specific parts of code without affecting execution.
->
-> They are typically used for explanations, clarifications, or temporary notes inside code.
+> Starts with `//` and continues to the end of the line. Used for inline notes or temporarily disabling code.
+
 ---
 
 - ### Syntax

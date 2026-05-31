@@ -1,11 +1,11 @@
 ---
 title: return
-description: Exit a function and return a value.
+description: Exit a function with an optional value.
 icon: check
 weight: 141
 ---
 
-> `return` exits the current function with an optional value.
+> Transfers control back to the caller with an optional return value. All non-void code paths must explicitly return. Use `fail` to exit with an error instead.
 
 ---
 

@@ -1,11 +1,11 @@
 ---
 title: errdefer
-description: Deferred execution only on error paths.
+description: Execute an expression only when the function exits with an error.
 icon: call_missed_outgoing
 weight: 146
 ---
 
-> `errdefer` executes an expression only when the current function exits via `fail` or a propagated error. Successful returns skip it.
+> Like `defer`, but only triggers on error exits via `fail` or propagated errors. Skipped on successful returns. Multiple `errdefer` statements execute in reverse order (LIFO).
 
 ---
 

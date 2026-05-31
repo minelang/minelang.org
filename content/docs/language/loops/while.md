@@ -1,11 +1,11 @@
 ---
 title: while
-description: Condition-based loop construct.
-icon: all_inclusive
+description: Condition-based loop.
+icon: rotate_90_degrees_ccw
 weight: 132
 ---
 
-> `while` repeats a statement or block as long as a condition remains true.
+> Repeats a block as long as a boolean condition is true. Supports an optional continue expression that runs after each iteration or `continue` call.
 
 ---
 

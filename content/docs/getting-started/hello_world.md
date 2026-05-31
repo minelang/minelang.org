@@ -10,7 +10,7 @@ weight: 4
 
     ```mine
     fn main() {
-        @printn("Hello World!");
+        @printn("Hello World!")
     }
     ```
 

@@ -1,13 +1,12 @@
 ---
 title: File Comment
-description: File-level metadata used for organizing and describing source files.
-icon: file-text
+description: A structured metadata comment at the top of a file.
+icon: comment
 weight: 111
 ---
 
-> File comments appear at the very beginning of a file and are used to define file-level metadata.
->
-> They are not part of program execution and are intended for tooling and organizational purposes.
+> Starts with `#` and holds key/value pairs separated by `:`. Used to attach metadata like author, version, or description. Must appear before any code.
+
 ---
 
 - ### Syntax

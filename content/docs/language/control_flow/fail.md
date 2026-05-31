@@ -1,11 +1,11 @@
 ---
 title: fail
-description: Return an error from a function.
+description: Exit a function with an error.
 icon: close
 weight: 142
 ---
 
-> `fail` exits the current function with an error value. The function's return type must include an error annotation (`!T` or `errset!T`).
+> Returns an error value from the current function. Requires an error annotation (`!T`) on the return type. The error set is inferred unless explicitly declared with `errset`.
 
 ---
 

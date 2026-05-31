@@ -1,11 +1,11 @@
 ---
 title: fn
-description: Function declarations with optional error handling.
-icon: resume
+description: Function declaration.
+icon: dynamic_form
 weight: 123
 ---
 
-> `fn` declares a function that executes a block of statements and optionally returns a value.
+> Declares a named function with optional parameters, return type, and error annotation. Supports `pub`, `inline`, and `comptime` modifiers.
 
 ---
 

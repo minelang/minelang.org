@@ -1,8 +1,8 @@
 ---
 title: Control Flow
-description: Control flow statements for managing execution paths.
+description: Manage and redirect execution paths.
 icon: alt_route
 weight: 140
 ---
 
-> Control flow statements determine how a program executes: which code runs, when it runs, and when execution terminates. Mine provides statements for cleanup, early exit, and error handling.
+> Mine's control flow statements: `return` exits a function, `fail` returns an error, `break` exits a loop or block, `continue` skips to the next iteration, `defer` runs cleanup on scope exit, and `errdefer` runs cleanup only on error.

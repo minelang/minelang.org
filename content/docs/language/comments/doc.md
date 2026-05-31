@@ -1,13 +1,12 @@
 ---
 title: Doc Comment
-description: Structured comments placed before declarations to provide tool-friendly documentation.
-icon: book-text
+description: A comment that documents the item immediately below it.
+icon: comment
 weight: 112
 ---
 
-> Documentation comments are placed directly before declarations.
->
-> They are primarily used by Mine language server (**MLS**) to provide hover information, signatures, and contextual documentation.
+> Starts with `///` and attaches to the next declaration. Used to describe functions, types, constants, and other named items.
+
 ---
 
 - ### Syntax

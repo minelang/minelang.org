@@ -1,11 +1,11 @@
 ---
 title: const
-description: Immutable constant declarations.
-icon: deployed_code
+description: Immutable constant declaration.
+icon: variable_remove
 weight: 122
 ---
 
-> `const` declares an immutable binding that cannot be reassigned after initialization.
+> Declares a named binding that cannot be reassigned after initialization. Supports type inference, optional initial values, and `pub`/`comptime` modifiers.
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Builtin Functions
-description: TODO
-icon: health_cross
+description: Compiler-provided functions available without imports.
+icon: construction
 weight: 1100
 ---
 
-> TODO
+> Builtins are prefixed with `@` (e.g. `@print`, `@printn`) and provide low-level operations that are built directly into the compiler.

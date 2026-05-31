@@ -1,11 +1,11 @@
 ---
 title: defer
-description: Deferred execution when leaving a block scope.
+description: Execute an expression when the current block exits.
 icon: call_made
 weight: 145
 ---
 
-> `defer` executes an expression when control flow exits the current block, whether through normal completion or `return`.
+> Schedules an expression or block to run on scope exit, regardless of how the block exits. Multiple defers execute in reverse order (LIFO).
 
 ---
 

@@ -1,12 +1,11 @@
 ---
 title: section
-description: Named regions used to organize code into logical groups.
+description: Visual regions for organizing code with no effect on execution.
 icon: view_day
 weight: 152
 ---
 
-> Sections are named regions for organizing related code into logical groups.
-> They have no effect on program execution, they exist solely for code organization and are handled automatically by Mine.
+> Named decorative markers that divide code into logical regions. Three levels of hierarchy are available. All formatting is handled automatically by Mine's LSP.
 
 ---
 

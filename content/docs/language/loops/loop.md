@@ -1,11 +1,11 @@
 ---
 title: loop
-description: Infinite loop construct.
+description: Infinite loop that repeats until explicitly exited.
 icon: all_inclusive
 weight: 131
 ---
 
-> `loop` creates an infinite loop that repeats a statement or block until explicitly exited.
+> Runs a block indefinitely with an optional continue expression. Use `break` or `return` to exit, and `continue` to skip to the next iteration.
 
 ---
 

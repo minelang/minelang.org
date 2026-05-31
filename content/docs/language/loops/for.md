@@ -1,11 +1,11 @@
 ---
 title: for
-description: Iterator-based loop construct.
-icon: all_inclusive
+description: Iterator-based loop.
+icon: conversion_path
 weight: 133
 ---
 
-> `for` iterates over numbers, ranges, or arrays, providing values and indices to the loop body.
+> Iterates over ranges, numbers, arrays, or custom iterators. Provides value and index bindings, with `_` to skip either.
 
 ---
 
