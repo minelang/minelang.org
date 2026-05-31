@@ -45,6 +45,6 @@ weight: 131
 
     > Use [break](../control_flow/break/) or [return](../control_flow/return/) to exit an infinite loop.
     >
-    > Use [continue](../control_flow/continue/) to skip to the next iteration; the continue expression runs after each `continue`.
+    > Use [continue](../control_flow/continue/) to skip to the next iteration. the continue expression runs after each `continue`.
     >
     > For bounded loops with a condition, consider using `while` instead.

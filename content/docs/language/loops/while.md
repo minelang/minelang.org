@@ -48,4 +48,4 @@ weight: 132
 
     > Use [break](/docs/language/control_flow/break/) to exit the loop early.
     >
-    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration; the continue expression runs after each `continue`.
+    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration. the continue expression runs after each `continue`.
