@@ -19,8 +19,7 @@
         "assets": true,
         "themes": true,
         "public": true,
-        "layouts": true,
-        "static": true
+        "layouts": true
     },
     "hide-files.files": [
         ".vscode",
@@ -37,7 +36,6 @@
         "assets",
         "themes",
         "public",
-        "layouts",
-        "static"
+        "layouts"
     ]
 }

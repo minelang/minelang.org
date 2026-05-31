@@ -33,5 +33,5 @@ weight: 113
     // This comment spans
     // across multiple lines
     // in your code
-    let total = score + health;
+    const total = score + health;
     ```

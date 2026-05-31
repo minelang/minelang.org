@@ -1,5 +1,5 @@
 ---
-title: Blocks
+title: block
 description: Scoped groups of statements enclosed in braces.
 icon: data_object
 weight: 151

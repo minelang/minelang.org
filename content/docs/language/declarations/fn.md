@@ -12,18 +12,18 @@ weight: 123
 - ### Syntax
 
     ```mine
-    pub inline comptime fn ident(params) errset!return_type {
+    pub inline comptime fn ident(params) errset!type {
         // ...
     }
     ```
 
-    > `pub`, `inline`, and `comptime` are optional.
-
-    > Return type can be inferred from `return` statements if not specified.
-
-    > `errset!` is optional (if omitted but `!` is used, the error set is inferred).
-
-    > Body must be a block `{}`.
+    > [`pub`](../keywords/pub), [`inline`](../keywords/inline), and [`comptime`](../keywords/comptime) are optional.
+    >
+    > Error annotation (`errset!`) is optional (if omitted but `!` is used, the [`errset`](../types/errset) is inferred).
+    >
+    > Return type (`type`) can be inferred from [`return`](../control_flow/return) statements if not specified (**required when `!` used**).
+    >
+    > Body must be a [block `{}`](../blocks/block).
 
     ---
 
@@ -71,6 +71,6 @@ weight: 123
 
 - ### Notes
 
-    > `inline` hints inlining at call sites.
+    > [`inline`](../keywords/inline) hints inlining at call sites.
     >
-    > `comptime` forces compile-time evaluation.
+    > [`comptime`](../keywords/comptime) forces compile-time evaluation.

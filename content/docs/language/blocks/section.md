@@ -1,5 +1,5 @@
 ---
-title: Sections
+title: section
 description: Named regions used to organize code into logical groups.
 icon: view_day
 weight: 152
@@ -7,9 +7,6 @@ weight: 152
 
 > Sections are named regions for organizing related code into logical groups.
 > They have no effect on program execution, they exist solely for code organization and are handled automatically by Mine.
->
-> Sections improve readability by dividing large files into clearly labeled regions.
-> Unlike comment-based separators commonly used in other languages, sections are part of the language itself and can be understood by tooling.
 
 ---
 

@@ -15,7 +15,7 @@ weight: 122
     pub comptime const ident : type = expr
     ```
 
-    > `pub` and `comptime` are optional.
+    > [`pub`](../keywords/comptime) and [`comptime`](../keywords/comptime) are optional.
 
     > Type annotation (`: type`) is optional if an initial value is provided.
 
