@@ -7,7 +7,7 @@ weight: 112
 
 > Documentation comments are placed directly before declarations.
 >
-> They are primarily used by language tools (LSP) to provide hover information, signatures, and contextual documentation.
+> They are primarily used by Mine language server (**MLS**) to provide hover information, signatures, and contextual documentation.
 ---
 
 - ### Syntax

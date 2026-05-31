@@ -16,10 +16,10 @@
         "go.sum": true,
         "hugo.toml": true,
         "README.md": true,
-        "layouts": true,
-        "public": true,
         "assets": true,
         "themes": true,
+        "public": true,
+        "layouts": true,
         "static": true
     },
     "hide-files.files": [
@@ -34,10 +34,10 @@
         "go.sum",
         "hugo.toml",
         "README.md",
-        "layouts",
-        "public",
         "assets",
         "themes",
+        "public",
+        "layouts",
         "static"
     ]
 }

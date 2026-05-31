@@ -1,12 +1,35 @@
 /* Custom global styles */
 :root{
+    --body-bg: #16161a;
+    --sidebar-bg: #16161a;
     --prism-code-bg: #1a1b1b !important;
+    --content-link-color: var(--blue-300);
+    --top-header-bg: hsl(240, 8%, 9%, 0.8);
+}
+
+table {
+    border-color: var(--card-border-color);
+    border-style: solid;
+    border-width: 1px;
+    margin-bottom: 1rem !important;
+}
+
+.docs-content .main-content blockquote {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-left: none !important;
+    padding-left: 0rem !important;
+}
+
+.doc-hr {
+    border-top: 1px solid var(--mine-border-color);
 }
 
 pre code {
     background: transparent !important;
     padding: 0px 1rem 1rem !important;
 }
+
 /* Logo color inversion when NOT in dark mode */
 
 html[data-dark-mode] .logo-icon img{
@@ -53,43 +76,45 @@ html:not([data-dark-mode]) svg:has(image) {
 
 .docs-content h1, .docs-content .h1 {
     margin-top: 0.5rem !important;
-    margin-bottom: 2rem !important;
+
+    /* TODO: udpate it in the main theme repo */
+    margin-bottom: 1.8rem !important;
 }
 
+hr {
+    margin-bottom: 2rem !important;
+}
 .docs-content h2, .docs-content .h2 {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .docs-content h3, .docs-content .h3 {
+    font-size: calc(1.3rem) !important;
     margin-bottom: 1rem !important;
 }
 
 .docs-content h4, .docs-content .h4 {
+    font-size: calc(1rem) !important;
     margin-bottom: 1rem !important;
 }
 
 .docs-content h5, .docs-content .h5 {
+    font-size: calc(0.9rem) !important;
     margin-bottom: 1rem !important;
 }
 
 .docs-content h6, .docs-content .h6 {
+    font-size: calc(0.8rem) !important;
     margin-bottom: 1rem !important;
 }
 
 .docs-content .main-content blockquote p {
-    opacity: 0.5;
-}
-
-div.code-toolbar {
-    /* min-width: fit-content; */
-    /* max-width: 800px !important; */
+    /* opacity: 0.5; */
+    color: #898989;
 }
 
 .docs-content .main-content blockquote {
     font-size: 1rem;
-}
-
-.docs-content {
 }
 
 /* Index page styles */
@@ -184,4 +209,33 @@ footer {
     .social-icons .divider {
         height: 16px !important;
     }
+}
+
+.docs-content .main-content code {
+    font-size: 80% !important;
+}
+
+p:has(+p) {
+    margin-bottom: 0rem !important;
+}
+
+blockquote p:has(+p) {
+    margin-bottom: 0.5rem !important;
+}
+
+main.page-content footer:has(.container-fluid) {
+    display: none !important;
+}
+
+a .card-body.py-2 {
+    align-content: center;
+}
+
+.docs-toc toc > div {
+    display: none !important;
+}
+
+ul > li:last-child,
+ol > li:last-child {
+    margin-bottom: 1rem;
 }

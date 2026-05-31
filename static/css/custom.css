@@ -5,12 +5,6 @@
     --prism-code-bg: #1a1b1b !important;
     --content-link-color: var(--blue-300);
     --top-header-bg: hsl(240, 8%, 9%, 0.8);
-
-    /* --mine-border-color: #a58a5975;
-    --mine-border-hover-color: #d4b98875;
-    --sidebar-border-color: var(--mine-border-color);
-    --card-border-color: var(--mine-border-color);
-    --card-border-hover-color: var(--mine-border-hover-color); */
 }
 
 table {
@@ -115,7 +109,8 @@ hr {
 }
 
 .docs-content .main-content blockquote p {
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    color: #898989;
 }
 
 .docs-content .main-content blockquote {
