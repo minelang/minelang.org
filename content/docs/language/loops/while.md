@@ -23,13 +23,29 @@ weight: 132
 
     > `expr` can be `(expr)`.
 
+    ---
 
----
+- ### Examples
+
+    ```mine
+    // Basic while loop
+    while (i < 10) {
+        i += 1
+    }
+    ```
+
+    ```mine
+    // With continue expression
+    while (i < 10) : (i += 1) {
+        if (i == 5) continue
+        @printn(i)
+    }
+    ```
+
+    ---
 
 - ### Notes
 
     > Use [break](/docs/language/control_flow/break/) to exit the loop early.
     >
-    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration.
-    >
-    > Continue expressions are useful for updating loop variables, similar to increment expressions in other languages.
+    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration; the continue expression runs after each `continue`.

@@ -21,14 +21,30 @@ weight: 131
 
     > `expr` can be `(expr)`.
 
----
+    ---
+
+- ### Examples
+
+    ```mine
+    // Basic infinite loop
+    loop {
+        if (done) break
+    }
+    ```
+
+    ```mine
+    // With continue expression (acts as increment)
+    loop : (i += 1) {
+        if (i >= 10) break
+    }
+    ```
+
+    ---
 
 - ### Notes
 
-    > Use control flow statements like [break](../control_flow/break/) or [return](../control_flow/return/) to exit an infinite loop.
+    > Use [break](../control_flow/break/) or [return](../control_flow/return/) to exit an infinite loop.
     >
-    > Use [continue](../control_flow/continue/) to skip to the next iteration.
-    >
-    > Continue expressions are useful for maintaining loop state like counters.
+    > Use [continue](../control_flow/continue/) to skip to the next iteration; the continue expression runs after each `continue`.
     >
     > For bounded loops with a condition, consider using `while` instead.

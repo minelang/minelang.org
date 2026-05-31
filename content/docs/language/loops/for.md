@@ -23,22 +23,37 @@ weight: 133
 
     > Parentheses are optional: `for (v, i) in arr` or `for v, i in arr`.
 
----
+    ---
+
+- ### Examples
+
+    ```mine
+    // Iterate over a range
+    for i in 0..10  { @printn(i) } // exclusive
+    for i in 0..=10 { @printn(i) } // inclusive
+    ```
+
+    ```mine
+    // Iterate over an array with value and index
+    for v, i in arr { @printn("[{}] = {}", i, v) }
+    for _, i in arr { @printn("index: {}", i ) } // skip value
+    ```
+
+    ```mine
+    // Custom iterator
+    for item in MyIterator(data) {
+        @printn(item)
+    }
+    ```
+
+    ---
 
 - ### Notes
 
-    > Use [break](/docs/language/control_flow/break/) to exit the loop early.
-    >
-    > Use [continue](/docs/language/control_flow/continue/) to skip to the next iteration.
+    > Use [break](/docs/language/control_flow/break/) to exit early; [continue](/docs/language/control_flow/continue/) to skip to the next iteration.
 
-    > Ranges: `start..end` (exclusive) and `start..=end` (inclusive).
-    >
     > Ranges work in both directions (forward and backward).
 
-    > Custom iterators must be structs with a public `next()` method.
+    > Custom iterators must be structs with a public `next() ?T` method taking `self: *StructName`.
     >
-    > Iterator `next()` method must return an optional type (e.g., `?T`).
-    >
-    > Iterator `next()` method must take `self: *StructName` as the first parameter.
-    >
-    > See [Basic Iterator](/docs/examples/iterators/basic_iterator/) for practical examples of creating custom iterators.
+    > See [Basic Iterator](/docs/examples/iterators/basic_iterator/) for practical examples.
