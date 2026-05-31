@@ -1,7 +1,7 @@
 ---
 title: const
 description: Immutable constant declarations.
-icon: code
+icon: deployed_code
 weight: 122
 ---
 

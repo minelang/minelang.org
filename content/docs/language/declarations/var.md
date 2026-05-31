@@ -1,7 +1,7 @@
 ---
 title: var
 description: Mutable variable declarations.
-icon: code
+icon: deployed_code
 weight: 121
 ---
 
