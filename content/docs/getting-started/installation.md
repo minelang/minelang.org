@@ -5,4 +5,8 @@ icon: downloading
 weight: 3
 ---
 
-> coming soon
+At the moment, **Mine** is still being developed locally.
+
+Once the vision is complete and there is a strong foundation, I will share it and update this page accordingly.
+
+---

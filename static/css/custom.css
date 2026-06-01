@@ -19,9 +19,13 @@ table {
     font-size: 1.25rem;
 }
 
-.docs-content .main-content blockquote:not(:has(p:nth-of-type(2))) {
+/* .docs-content .main-content blockquote:not(:has(p:nth-of-type(2))) {
     border-left: none !important;
     padding-left: 0rem !important;
+} */
+
+.docs-content p {
+    color: gray;
 }
 
 .doc-hr {
@@ -239,4 +243,12 @@ a .card-body.py-2 {
 ul > li:last-child,
 ol > li:last-child {
     margin-bottom: 1rem;
+}
+
+div.code-toolbar {
+    background-image: linear-gradient(to right, var(--body-bg), var(--prism-code-bg));
+}
+
+.docs-content .main-content pre {
+    background: transparent !important;
 }

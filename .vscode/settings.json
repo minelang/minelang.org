@@ -17,7 +17,6 @@
         "hugo.toml": true,
         "README.md": true,
         "assets": true,
-        "themes": true,
         "public": true,
         "layouts": true
     },
@@ -34,7 +33,6 @@
         "hugo.toml",
         "README.md",
         "assets",
-        "themes",
         "public",
         "layouts"
     ]

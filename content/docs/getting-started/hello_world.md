@@ -5,18 +5,25 @@ icon: code
 weight: 4
 ---
 
+**Mine** is still under development, but this is a simple first program you can try with the current toolchain.
 
-1. Create a file called `main.mine`, with the following contents:
+It is meant to show the language in a small, usable form while the compiler and runtime continue to improve.
 
-    ```mine
-    fn main() {
-        @printn("Hello World!")
-    }
-    ```
+---
 
-2. Use `mine run main.mine` to build and run it.
+- ### Steps
 
-    ```bash
-    # Output
-    Hello World
-    ```
+  1. Create a file called `main.mine` with the following code:
+
+      ```mine
+      fn main() {
+          @printn("Hello World!")
+      }
+      ```
+
+  2. Use `mine run main.mine` command to build and run it.
+
+      ```bash
+      # Output
+      Hello World!
+      ```

@@ -136,6 +136,10 @@
     {{ $len := (len $list) -}}
 
     {{ range $index, $element := $list -}}
+        {{- $content := "" -}}
+        {{- if gt (len .Content) 0 -}}
+            {{- $content = (.Content | plainify) -}}
+        {{- end -}}
         index.add(
             {
                 id: {{ $index }},
@@ -144,9 +148,9 @@
                 {{ with .Description -}}
                     description: {{ . }},
                 {{ else -}}
-                description: {{ .Summary | htmlUnescape | plainify }},
+                description: {{ .Summary | plainify }},
                 {{ end -}}
-                content: {{ .Content | htmlUnescape | plainify }}
+                content: {{ $content | jsonify }}
             }
         );
     {{ end -}}
