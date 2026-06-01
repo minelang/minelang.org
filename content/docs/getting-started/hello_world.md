@@ -5,9 +5,7 @@ icon: code
 weight: 4
 ---
 
-**Mine** is still under development, but this is a simple first program you can try with the current toolchain.
-
-It is meant to show the language in a small, usable form while the compiler and runtime continue to improve.
+Write a simple program that prints to the console using **Mine's** built-in functions.
 
 ---
 

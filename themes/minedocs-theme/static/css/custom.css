@@ -19,9 +19,13 @@ table {
     font-size: 1.25rem;
 }
 
-.docs-content .main-content blockquote:not(:has(p:nth-of-type(2))) {
+/* .docs-content .main-content blockquote:not(:has(p:nth-of-type(2))) {
     border-left: none !important;
     padding-left: 0rem !important;
+} */
+
+.docs-content p {
+    color: gray;
 }
 
 .doc-hr {
@@ -76,6 +80,9 @@ html:not([data-dark-mode]) svg:has(image) {
 .docs-content .main-content ul > li:has(>h5)::before { top: 10px; }
 .docs-content .main-content ul > li:has(>h6)::before { top: 10px; }
 
+.docs-content .main-content ol {
+    padding-left: 0;
+}
 
 .docs-content h1, .docs-content .h1 {
     margin-top: 0.5rem !important;

@@ -11,7 +11,9 @@ weight: 2
 
 - ### A Note from the Author
 
-    > Hey everyone 👋, I'm Maysara, and this is **Mine**.
+    > Hey everyone 👋
+    >
+    > I'm Maysara, and this is **Mine**.
 
     > Mine started as a personal project built for learning and enjoyment.
     > I don't claim to have all the answers (my knowledge is humble).
@@ -36,4 +38,4 @@ weight: 2
 
 ---
 
-_This page will be updated after Mine's first official release._
+_This page will be updated later._
