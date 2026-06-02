@@ -5,7 +5,7 @@ icon: code
 weight: 4
 ---
 
-Write a simple program that prints to the stderr using **Mine's** built-in functions.
+Write a simple program that prints "Hello World!" to the standard output stream.
 
 ---
 
