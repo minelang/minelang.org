@@ -5,7 +5,7 @@ icon: waving_hand
 weight: 2
 ---
 
-**Mine** is a general-purpose programming language designed around clarity, explicitness, and developer experience (without sacrificing performance or control).
+**Mine** is a general-purpose programming language designed around clarity, explicitness, and great DX (without sacrificing performance or control).
 
 ---
 
