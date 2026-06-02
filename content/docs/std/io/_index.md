@@ -1,7 +1,7 @@
 ---
 title: io
 description: Standard input and output operations in Mine's standard library.
-icon: swap_vert
+icon: terminal
 weight: 1100
 ---
 
