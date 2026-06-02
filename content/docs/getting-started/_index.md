@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: Learn the basics and write your first Mine program.
+description: Learn about Mine, install it, and build your first program.
 icon: rocket_launch
 weight: 1
 ---

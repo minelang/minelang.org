@@ -11,5 +11,4 @@ Once the vision is complete and there is a strong foundation, I will share it an
 
 ---
 
-
-_This page will be updated later._
+_This page will be updated as the language evolves._

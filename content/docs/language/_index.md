@@ -1,6 +1,6 @@
 ---
 title: Language
-description: Learn the fundamentals of the Mine programming language.
+description: Statements, expressions, types, built-in functions, and keywords.
 icon: code
 weight: 100
 ---

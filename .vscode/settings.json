@@ -18,7 +18,9 @@
         "README.md": true,
         "assets": true,
         "public": true,
-        "layouts": true
+        "layouts": true,
+        "static": true,
+        "themes": true
     },
     "hide-files.files": [
         ".vscode",
@@ -34,6 +36,8 @@
         "README.md",
         "assets",
         "public",
-        "layouts"
+        "layouts",
+        "static",
+        "themes"
     ]
 }

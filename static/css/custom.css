@@ -255,3 +255,16 @@ div.code-toolbar {
 .docs-content .main-content pre {
     background: transparent !important;
 }
+
+@media (min-width: 1200px) {
+    .col-xl-9 {
+        width: 95%;
+    }
+}
+
+.docs-toc {
+    display: none !important;
+}
+
+.logo-icon .big { display: none !important; }
+.logo-icon .small { display: block !important; }

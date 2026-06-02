@@ -20,7 +20,7 @@ weight: 2
     > What I do have is enough persistence and attention to detail to keep building carefully and deliberately.
 
     > I've committed to thinking through every part of this language in a deliberate, logical way.
-    > There's no external pressure here. just the freedom to do what feels right, and the willingness to go back and fix what doesn't.
+    > There's no external pressure here, just the freedom to do what feels right, and the willingness to go back and fix what doesn't.
 
     > Programming languages are a reflection of how someone thinks.
     > Mine is a reflection of how I think. Which means it's still evolving, just like I am.
@@ -38,4 +38,4 @@ weight: 2
 
 ---
 
-_This page will be updated later._
+_This page will be updated as the language evolves._
