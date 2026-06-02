@@ -5,6 +5,6 @@ icon: code
 weight: 100
 ---
 
-> Explore Mine's syntax, types, functions, control flow, and advanced features. Build safe, efficient programs with expressive language design.
+Explore Mine's syntax, types, functions, control flow, and advanced features. Build safe, efficient programs with expressive language design.
 
 ---

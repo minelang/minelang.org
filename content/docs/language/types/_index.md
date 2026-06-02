@@ -5,6 +5,6 @@ icon: category
 weight: 179
 ---
 
-> Mine's type system includes primitives, structs, arrays, pointers, optionals, ..., and error annotations for safe, expressive data modeling.
+Mine's type system includes primitives, structs, arrays, pointers, optionals, ..., and error annotations for safe, expressive data modeling.
 
 ---
