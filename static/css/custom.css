@@ -10,8 +10,9 @@
 table {
     border-color: var(--card-border-color);
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
     margin-bottom: 1rem !important;
+    color: gray;
 }
 
 .docs-content .main-content blockquote {
@@ -258,12 +259,12 @@ div.code-toolbar {
 
 @media (min-width: 1200px) {
     .col-xl-9 {
-        width: 95%;
+        width: 75%;
     }
 }
 
 .docs-toc {
-    display: none !important;
+    display: flex !important;
 }
 
 .logo-icon .big { display: none !important; }

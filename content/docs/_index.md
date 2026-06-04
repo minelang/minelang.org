@@ -2,9 +2,10 @@
 title: Docs
 description: TODO
 icon: book
-weight: 2
+weight: 1
 ---
 
-**Mine** is a general-purpose programming language designed around clarity, explicitness, and great DX (without sacrificing performance or control).
+**Mine** is a general-purpose programming language with clarity, explicitness,
+and great DX without sacrificing performance or control.
 
 ---

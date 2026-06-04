@@ -1,8 +1,8 @@
 ---
-title: Installation
-description: Installation instructions for the Mine programming language.
+title: Setup
+description: Setup and installation for the Mine programming language.
 icon: downloading
-weight: 3
+weight: 12
 ---
 
 At the moment, **Mine** is still being developed locally.

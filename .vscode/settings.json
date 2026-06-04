@@ -16,11 +16,11 @@
         "go.sum": true,
         "hugo.toml": true,
         "README.md": true,
-        "assets": true,
         "public": true,
-        "static": true,
+        "layouts": true,
+        "assets": true,
         "themes": true,
-        "layouts": true
+        "static": true
     },
     "hide-files.files": [
         ".vscode",
@@ -34,10 +34,10 @@
         "go.sum",
         "hugo.toml",
         "README.md",
-        "assets",
         "public",
-        "static",
+        "layouts",
+        "assets",
         "themes",
-        "layouts"
+        "static"
     ]
 }

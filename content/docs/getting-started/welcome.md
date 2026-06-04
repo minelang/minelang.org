@@ -2,10 +2,11 @@
 title: Welcome
 description: Getting started with the Mine programming language.
 icon: waving_hand
-weight: 2
+weight: 11
 ---
 
-**Mine** is a general-purpose programming language designed around clarity, explicitness, and great DX (without sacrificing performance or control).
+**Mine** is a general-purpose programming language with clarity, explicitness,
+and great DX without sacrificing performance or control.
 
 ---
 
