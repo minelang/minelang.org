@@ -4,11 +4,13 @@
     - [x] `visibility-in-mine`
     - [x] `mutability-in-mine`
     - [x] `evaluation-phases-in-mine`
-    - [x] `how-types-work-in-mine`
+    - [x] `types-in-mine`
     - [x] `error-handling-in-mine`
     - [x] `control-flow-in-mine`
     - [x] `exit-stmts-in-mine`
     - [x] `deferred-stmts-in-mine`
+    - [x] `generics-in-mine`
+    - [ ] `classes-in-mine`
     - [ ] `...`
 
     <br>
