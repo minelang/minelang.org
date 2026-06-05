@@ -92,7 +92,10 @@ html:not([data-dark-mode]) svg:has(image) {
 
 hr {
     margin-bottom: 2rem !important;
+    opacity: 0.1 !important;
 }
+
+
 .docs-content h2, .docs-content .h2 {
     margin-bottom: 1rem !important;
 }
@@ -220,10 +223,6 @@ footer {
     }
 }
 
-.docs-content .main-content p code {
-    font-size: 80% !important;
-}
-
 p:has(+p) {
     margin-bottom: 0rem !important;
 }
@@ -276,3 +275,11 @@ div.code-toolbar {
 
 .logo-icon .big { display: none !important; }
 .logo-icon .small { display: block !important; }
+
+.docs-content .main-content p code {
+    font-size: 90% !important;
+    border: none;
+    border-radius: 1px;
+    color: #babdc4;
+    background: #2d2d2d;
+}
