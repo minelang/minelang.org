@@ -1,10 +1,10 @@
 ---
 title: vs
-description: Compare Mine with other languages and runtimes.
+description: Compare Mine's design and features against other languages and platforms.
 icon: compare
 weight: 10000
 ---
 
-Compare Mine's design, features, and standard library against other languages and platforms.
+Compare Mine's design and features against other languages and platforms.
 
 ---

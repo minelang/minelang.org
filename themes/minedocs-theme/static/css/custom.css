@@ -1,7 +1,7 @@
 /* Custom global styles */
 :root{
-    --body-bg: #16161a;
-    --sidebar-bg: #16161a;
+    --body-bg: #131418;
+    --sidebar-bg: #131418;
     --prism-code-bg: #1a1b1b !important;
     --content-link-color: var(--blue-300);
     --top-header-bg: hsl(240, 8%, 9%, 0.8);
@@ -10,8 +10,9 @@
 table {
     border-color: var(--card-border-color);
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
     margin-bottom: 1rem !important;
+    color: gray;
 }
 
 .docs-content .main-content blockquote {
@@ -219,7 +220,7 @@ footer {
     }
 }
 
-.docs-content .main-content code {
+.docs-content .main-content p code {
     font-size: 80% !important;
 }
 
@@ -257,13 +258,20 @@ div.code-toolbar {
 }
 
 @media (min-width: 1200px) {
+    /* .docs-toc {
+        min-width: fit-content;
+    } */
     .col-xl-9 {
-        width: 95%;
+        width: 70%;
+    }
+
+    #toc a {
+        font-size: 13px;
     }
 }
 
 .docs-toc {
-    display: none !important;
+    display: flex !important;
 }
 
 .logo-icon .big { display: none !important; }

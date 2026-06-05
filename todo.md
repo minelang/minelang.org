@@ -6,6 +6,8 @@
 
     - [x] `/welcome`
 
+    - [x] `philosophy`
+
     - [x] `/install`
 
     - [x] `/hello_world`
@@ -14,19 +16,15 @@
 
   - [ ] `lang/`
 
-    - [ ] `philosophy`
-      - [ ] `mutability`
-      - [ ] `visibility`
-      - [ ] `optionals`
-      - [ ] `evaluation_phases`
-
-      <br>
-
-    - [ ] `comments/`
-      - [ ] `metadata`
-      - [ ] `documentation`
-      - [ ] `line`
-      - [ ] `sections`
+    - [ ] `trivia/`
+      - [ ] `comments/`
+        - [ ] `module-level`
+        - [ ] `binding-level`
+        - [ ] `line-level`
+      - [ ] `sections/`
+        - [ ] `l1`
+        - [ ] `l2`
+        - [ ] `l3`
 
       <br>
 
