@@ -17,8 +17,7 @@
         "README.md": true,
         "assets": true,
         "public": true,
-        "resources": true,
-        "themes": true
+        "resources": true
     },
     "hide-files.files": [
         ".vscode",
@@ -33,7 +32,6 @@
         "README.md",
         "assets",
         "public",
-        "resources",
-        "themes"
+        "resources"
     ]
 }
