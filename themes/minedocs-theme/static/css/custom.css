@@ -283,3 +283,12 @@ div.code-toolbar {
     color: #babdc4;
     background: #2d2d2d;
 }
+
+p:not(:first-of-type) {
+    padding-top: 10px !important;
+}
+
+p {
+    padding-top: 0px;
+    padding-bottom: 0px !important;
+}

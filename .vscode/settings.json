@@ -17,8 +17,7 @@
         "assets": true,
         "public": true,
         "resources": true,
-        "hugo.toml": true,
-        "themes": true
+        "hugo.toml": true
     },
     "hide-files.files": [
         ".vscode",
@@ -33,7 +32,6 @@
         "assets",
         "public",
         "resources",
-        "hugo.toml",
-        "themes"
+        "hugo.toml"
     ]
 }
