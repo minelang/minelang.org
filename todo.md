@@ -1,16 +1,20 @@
 # TODO
 
 - [ ] `https://maysara.blog/posts/`
-    - [x] `visibility-in-mine`
-    - [x] `mutability-in-mine`
-    - [x] `evaluation-phases-in-mine`
-    - [x] `types-in-mine`
-    - [x] `error-handling-in-mine`
-    - [x] `control-flow-in-mine`
-    - [x] `exit-stmts-in-mine`
-    - [x] `deferred-stmts-in-mine`
-    - [x] `generics-in-mine`
+    - [ ] `visibility-in-mine`
+    - [ ] `mutability-in-mine`
+    - [ ] `evaluation-phases-in-mine`
+    - [ ] `types-in-mine`
+    - [ ] `error-handling-in-mine`
+    - [ ] `control-flow-in-mine`
+    - [ ] `exit-stmts-in-mine`
+    - [ ] `deferred-stmts-in-mine`
+    - [ ] `generics-in-mine`
+    - [ ] `functions-in-mine`
+    - [ ] `loops-in-mine`
     - [ ] `classes-in-mine`
+    - [ ] `oop-in-mine`
+    - [ ] `memory-in-mine`
     - [ ] `...`
 
     <br>

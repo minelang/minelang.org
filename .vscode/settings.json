@@ -13,11 +13,12 @@
         ".gitmodules": true,
         "go.mod": true,
         "go.sum": true,
-        "hugo.toml": true,
         "README.md": true,
         "assets": true,
         "public": true,
-        "resources": true
+        "resources": true,
+        "hugo.toml": true,
+        "themes": true
     },
     "hide-files.files": [
         ".vscode",
@@ -28,10 +29,11 @@
         ".gitmodules",
         "go.mod",
         "go.sum",
-        "hugo.toml",
         "README.md",
         "assets",
         "public",
-        "resources"
+        "resources",
+        "hugo.toml",
+        "themes"
     ]
 }
