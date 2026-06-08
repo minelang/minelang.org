@@ -1,6 +1,6 @@
 ---
 title: Welcome
-description: Getting started with the Mine programming language.
+description: Important notes, development status, and helpful resources.
 icon: waving_hand
 weight: 11
 ---
