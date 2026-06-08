@@ -1,7 +1,7 @@
 ---
 title: Mine Language Specification
 description: "Mine language spec: syntax, semantics, types, literals, bindings."
-tags: ["spec"]
+tags: ["draft"]
 date: 2026-06-08
 author: "Maysara"
 icon: format_letter_spacing_wider
