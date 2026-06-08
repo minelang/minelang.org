@@ -17,13 +17,6 @@ weight: 1
     - **Private by default** (use `pub` to opt in)
     - **Runtime by default** (use `comptime` to opt in)
 
-    Mine is what you get when a C++, Zig, and Rust engineer designs a language from scratch, taking only what works from each, leaving the legacy behind, with a touch of TypeScript ergonomics in the syntax.
-
-    - **C++** - expressiveness, OOP, RAII, operator overloading
-    - **Zig** - comptime, clean tooling, explicit control, no hidden magic
-    - **Rust** - `match`, optionals, error handling, `impl` blocks
-    - **TypeScript** *(flavor)* - constructor shorthand, structural shapes, concise syntax
-
     The final self-hosted implementation will have no LLVM or Zig dependency (compiled entirely by Mine itself).
 
     ---
