@@ -1,10 +1,10 @@
 ---
 title: Getting Started
-description: Learn about Mine, install it, and build your first program.
+description: Start your Mine journey with installation and your first program.
 icon: rocket_launch
 weight: 10
 ---
 
-Learn about Mine, install it, and build your first program.
+Everything you need to begin using Mine, from installation and setup to writing and running your first program.
 
 ---

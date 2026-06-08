@@ -24,6 +24,6 @@ Write a simple program that prints "Hello World!" to the standard output stream 
     Hello World!
     ```
 
----
+    ---
 
 _This page will be updated as the language evolves._

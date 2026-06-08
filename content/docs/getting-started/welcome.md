@@ -5,7 +5,7 @@ icon: waving_hand
 weight: 11
 ---
 
-Welcome to Mine Language :3
+Welcome to Mine :3
 
 ---
 
@@ -37,6 +37,12 @@ Welcome to Mine Language :3
     > In parallel, Mine will eventually be rewritten in Mine itself.
     > The first official **self-hosted** release (written and compiled entirely by Mine) is the long-term goal 🌟
 
----
+    ---
+
+- ### Drafts
+
+    > [Mine Language Specification](/blog/spec)
+
+    ---
 
 _This page will be updated as the language evolves._

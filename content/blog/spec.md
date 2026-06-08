@@ -864,3 +864,7 @@ weight: 1
     - ⚠️ String formatting full spec (`@print`/`std.fmt` format strings)
     - Standard library API
     - Memory allocator design
+    
+    More Todos :P
+    
+    - Add the missed pipe operator `|>` (left-assoc) to this doc.

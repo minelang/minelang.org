@@ -1,10 +1,14 @@
 ---
 title: Docs
-description: Complete documentation for the Mine programming language, including getting started guides, language features, standard library reference, and comparisons with other languages.
+description: Everything you need to learn, build, and master Mine.
 icon: book
 weight: 1
 ---
 
-Welcome to the Mine language documentation. Here you'll find everything you need to learn and master Mine, from basic setup to advanced language features and standard library APIs.
+Welcome to the official documentation for Mine 👋
+
+Whether you're writing your first program or exploring advanced features, you'll find guides, language references, standard library APIs, and practical examples to support your journey.
+
+Happy coding! 🚀
 
 ---
