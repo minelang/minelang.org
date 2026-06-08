@@ -33,3 +33,11 @@
     - [ ] `...`
 
       <br>
+
+
+---
+
+
+More Todos :P
+
+- Add the pipe operator `|>` to the spec.

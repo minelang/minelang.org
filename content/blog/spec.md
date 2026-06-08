@@ -865,6 +865,3 @@ weight: 1
     - Standard library API
     - Memory allocator design
     
-    More Todos :P
-    
-    - Add the missed pipe operator `|>` (left-assoc) to this doc.
