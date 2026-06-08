@@ -2,7 +2,7 @@
 title: Hello World
 description: Write your first program using the Mine programming language.
 icon: terminal
-weight: 14
+weight: 13
 ---
 
 Write a simple program that prints "Hello World!" to the standard output stream 🚀

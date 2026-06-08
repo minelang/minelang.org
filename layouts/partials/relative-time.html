@@ -1,0 +1,13 @@
+{{ $diff := sub (now.Unix) (.date.Unix) }}
+{{ $mins := div $diff 60 }}
+{{ $hours := div $mins 60 }}
+{{ $days := div $hours 24 }}
+{{ $months := div $days 30 }}
+{{ $years := div $days 365 }}
+{{ if lt $mins 1 }}just now
+{{ else if lt $mins 60 }}{{ $mins }}m ago
+{{ else if lt $hours 24 }}{{ $hours }}h ago
+{{ else if lt $days 30 }}{{ $days }}d ago
+{{ else if lt $months 12 }}{{ $months }}mo ago
+{{ else }}{{ $years }}y ago
+{{ end }}

@@ -367,7 +367,7 @@ $btn-link-hover-color:        var(--#{$prefix}link-hover-color);
 [data-dark-mode] {
 
     --body-bg: var(--dark);
-    --text-default: var(--text-light);
+    --text-default: gray;
     --text-default-inv: var(--text-dark);
     --text-muted: #b6b9be;
     --#{$prefix}secondary-color: #6c757d;

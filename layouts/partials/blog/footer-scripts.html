@@ -1,0 +1,89 @@
+{{ $dayjs := resources.Get "docs/js/dayjs.min.js" }}
+{{ $relativeTime := resources.Get "docs/js/relativeTime.min.js" }}
+{{ $app := resources.Get "docs/js/app.js" -}}
+
+{{ $slice := slice $dayjs $relativeTime $app -}}
+
+{{ if and (.Site.Params.docsearch.appID) (.Site.Params.docsearch.apiKey) -}}
+    {{ $docsearch := resources.Get "docs/js/docsearch.min.js" }}
+    {{ $slice = $slice | append $docsearch -}}
+{{ end }}
+
+{{ if eq .Site.Params.docs.prism true -}}
+    {{ $prism := resources.Get "docs/js/prism.js" }}
+    {{- $opts := dict
+        "params" (dict "langPath" (urls.JoinPath .Site.BaseURL "docs/js/components/"))
+    -}}
+    {{ $prism := $prism | js.Build $opts -}}
+    {{ $slice = $slice | append $prism -}}
+{{ end -}}
+
+<!-- Bootstrap JS -->
+{{ $js := resources.Get "docs/js/bootstrap.js" }}
+{{ $params := dict }}
+{{ $sourceMap := cond hugo.IsProduction "" "inline" }}
+{{ $opts := dict "sourceMap" $sourceMap "minify" hugo.IsProduction "target" "es2018" "params" $params }}
+{{ $js = $js | js.Build $opts }}
+{{ if hugo.IsProduction }}
+    {{ $js = $js | fingerprint "sha384" }}
+{{ end }}
+    <script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end -}} defer></script>
+
+{{ $js := $slice | resources.Concat "js/blog-bundle.js" -}}
+{{ if not hugo.IsServer }}
+    {{ $js = $js | minify | fingerprint "sha384" }}
+{{ end }}
+<script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end -}}></script>
+
+<!-- Blog-specific JS to prevent sidebar errors and provide smooth functionality -->
+<script>
+// Suppress sidebar-related errors gracefully
+window.addEventListener('error', function(event) {
+    if (event.message && (
+        event.message.includes("Cannot read properties of null") ||
+        event.message.includes("Cannot read property") ||
+        event.message.includes("getMenuItemBySection") ||
+        event.message.includes("querySelector")
+    )) {
+        // Suppress sidebar-related errors on blog pages
+        return true;
+    }
+}, true);
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#' && href !== '#top') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+});
+
+// Global function for back to top
+function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>

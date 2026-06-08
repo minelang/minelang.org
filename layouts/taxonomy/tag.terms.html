@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{{ $.Scratch.Delete "social_list" }}
+{{ $.Scratch.Set "pathName" (printf "%s" (.Site.Params.docs.pathName | default "docs")) }}
+{{ $social_params := slice "github" "twitter" "bluesky" "instagram" "rss" }}
+{{ range $social_params }}
+    {{ if isset site.Params.social . }}
+        {{ $.Scratch.Add "social_list" (slice .) }}
+    {{ end }}
+{{ end }}
+<html lang="{{ site.LanguageCode }}">
+    {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head.html") . -}}
+    <body>
+        <div class="content">
+            <div class="page-wrapper">
+                <nav id="sidebar" class="sidebar-wrapper d-none"></nav>
+                <main class="page-content bg-transparent">
+                {{- partial "blog/header.html" . -}}
+                <div class="container-fluid">
+                    <div class="layout-spacing">
+                        <div class="row flex-xl-nowrap">
+                            <div class="docs-content col-12 mt-0">
+                                <h1 class="content-title mb-0">Tags</h1>
+                                <div class="main-content mt-4">
+                                    {{ range .Site.Taxonomies.tags.ByCount }}
+                                    <div class="mb-3">
+                                        <a href="{{ .Page.RelPermalink }}" class="badge bg-secondary text-decoration-none fs-6 me-2">
+                                            {{ .Page.Title }}
+                                        </a>
+                                        <span class="text-muted small">({{ .Count }} {{ if eq .Count 1 }}post{{ else }}posts{{ end }})</span>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer.html") . -}}
+            </main>
+            </div>
+        </div>
+
+        {{ if site.Params.docs.backToTop | default true }}
+        <button onclick="topFunction()" id="back-to-top" aria-label="Back to Top Button" class="back-to-top fs-5"><svg width="24" height="24"><path d="M12,10.224l-6.3,6.3L4.32,15.152,12,7.472l7.68,7.68L18.3,16.528Z" style="fill:#fff"/></svg></button>
+        {{ end }}
+
+        {{ if eq .Site.Params.docs.darkMode true -}}
+            {{ $darkModeSwitch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-switch.js") | js.Build | minify }}
+            <script>{{ $darkModeSwitch.Content | safeJS }}</script>
+        {{ end -}}
+
+        {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer/footer-scripts.html") . -}}
+    </body>
+</html>

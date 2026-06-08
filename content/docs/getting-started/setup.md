@@ -2,7 +2,7 @@
 title: Setup
 description: Setup and installation for the Mine programming language.
 icon: downloading
-weight: 13
+weight: 12
 ---
 
 At the moment, **Mine** is still being developed locally :(

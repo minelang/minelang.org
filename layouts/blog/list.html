@@ -1,0 +1,49 @@
+{{ define "main" }}
+    {{ .Content }}
+
+    <div class="blog-list mt-4">
+        {{ $pages := where .Site.RegularPages "Section" "blog" }}
+        {{ $pages = sort $pages "Date" "desc" }}
+        
+        {{ if gt (len $pages) 0 }}
+            {{ range $pages }}
+            <article class="blog-post-summary mb-3">
+                <div class="d-flex justify-content-between align-items-baseline gap-2 flex-wrap">
+                    <h6 class="mb-0 fw-semibold">
+                        <a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a>
+                    </h6>
+                    <span class="small text-muted text-nowrap" title="{{ .Date.Format "January 2, 2006" }}">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="me-1" style="vertical-align: -2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        {{ partial "relative-time" (dict "date" .Date) }}
+                    </span>
+                </div>
+                {{ if .Params.description }}
+                <p class="small text-muted mb-1 mt-1">{{ .Params.description | markdownify }}</p>
+                {{ end }}
+                {{ if or .Params.tags .Params.author }}
+                <div class="d-flex align-items-center gap-2 small text-muted flex-wrap">
+                    {{ if .Params.tags }}
+                    <span class="d-flex align-items-center gap-1">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                        {{ range .Params.tags }}
+                        <a href="{{ site.BaseURL }}tags/{{ . | urlize }}/" class="badge bg-secondary text-decoration-none blog-tag">{{ . }}</a>
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                    {{ if .Params.author }}
+                    <span class="d-flex align-items-center gap-1">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <a href="{{ site.BaseURL }}authors/{{ .Params.author | urlize }}/" class="text-decoration-none">{{ .Params.author }}</a>
+                    </span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </article>
+            {{ end }}
+        {{ else }}
+        <div class="alert alert-info" role="alert">
+            No blog posts yet. Check back soon!
+        </div>
+        {{ end }}
+    </div>
+{{ end }}

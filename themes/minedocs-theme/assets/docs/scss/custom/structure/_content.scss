@@ -43,6 +43,7 @@
 
 // Links
 .docs-content .main-content a {
+    background-color: transparent !important;
     font-weight: 600;
     color: var(--content-link-color);
     &:hover {

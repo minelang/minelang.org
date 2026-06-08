@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{{ $.Scratch.Delete "social_list" }}
+{{ $.Scratch.Set "pathName" (printf "%s" (.Site.Params.docs.pathName | default "docs")) }}
+{{ $social_params := slice "github" "twitter" "bluesky" "instagram" "rss" }}
+{{ range $social_params }}
+    {{ if isset site.Params.social . }}
+        {{ $.Scratch.Add "social_list" (slice .) }}
+    {{ end }}
+{{ end }}
+<html lang="{{ site.LanguageCode }}">
+    {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "head.html") . -}}
+    <body>
+        <div class="content">
+            <div class="page-wrapper">
+                <nav id="sidebar" class="sidebar-wrapper d-none"></nav>
+                <main class="page-content bg-transparent">
+                {{- partial "blog/header.html" . -}}
+                <div class="container-fluid">
+                    <div class="layout-spacing">
+                        <div class="row flex-xl-nowrap">
+                            <div class="docs-content col-12 mt-0">
+                                <h1 class="content-title mb-0">Authors</h1>
+                                <div class="main-content mt-4">
+                                    {{ range .Pages.ByTitle }}
+                                    {{ $postCount := len (where (where $.Site.RegularPages "Section" "blog") ".Params.author" .Title) }}
+                                    {{ $githubUrl := "" }}
+                                    {{ range .Params.links }}{{ if eq .label "GitHub" }}{{ $githubUrl = .url }}{{ end }}{{ end }}
+                                    {{ $avatarUrl := "" }}
+                                    {{ if $githubUrl }}{{ $avatarUrl = printf "%s?s=80" (strings.ReplaceRE "^https?://github\\.com/" "https://avatars.githubusercontent.com/" $githubUrl) }}{{ end }}
+                                    <div class="d-flex align-items-start gap-3 mb-4 p-3 border rounded">
+                                        {{ if $avatarUrl }}
+                                        <img src="{{ $avatarUrl }}" alt="{{ .Title }}" class="rounded" style="width: 60px; height: 60px; object-fit: contain;">
+                                        {{ end }}
+                                        <div>
+                                            <h3 class="mb-1"><a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a></h3>
+                                            {{ if .Params.description }}
+                                            <p class="text-muted small mb-1">{{ .Params.description }}</p>
+                                            {{ end }}
+                                            <span class="text-muted small">{{ $postCount }} {{ if eq $postCount 1 }}post{{ else }}posts{{ end }}</span>
+                                            {{ if .Params.links }}
+                                            <div class="d-flex gap-2 mt-2">
+                                                {{ range .Params.links }}
+                                                {{ $label := .label }}
+                                                <a href="{{ .url }}" target="_blank" class="btn btn-icon btn-soft" title="{{ $label }}">
+                                                    {{ partial "social-icon" (dict "label" $label) }}
+                                                </a>
+                                                {{ end }}
+                                            </div>
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer.html") . -}}
+            </main>
+            </div>
+        </div>
+
+        {{ if site.Params.docs.backToTop | default true }}
+        <button onclick="topFunction()" id="back-to-top" aria-label="Back to Top Button" class="back-to-top fs-5"><svg width="24" height="24"><path d="M12,10.224l-6.3,6.3L4.32,15.152,12,7.472l7.68,7.68L18.3,16.528Z" style="fill:#fff"/></svg></button>
+        {{ end }}
+
+        {{ if eq .Site.Params.docs.darkMode true -}}
+            {{ $darkModeSwitch := resources.Get (printf "/%s/%s" ($.Scratch.Get "pathName") "js/darkmode-switch.js") | js.Build | minify }}
+            <script>{{ $darkModeSwitch.Content | safeJS }}</script>
+        {{ end -}}
+
+        {{- partialCached (printf "%s/%s" ($.Scratch.Get "pathName") "footer/footer-scripts.html") . -}}
+    </body>
+</html>

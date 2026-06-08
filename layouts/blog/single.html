@@ -1,0 +1,88 @@
+{{ define "main" }}
+    <article>
+        <!-- Blog Post Metadata -->
+        <div class="d-flex flex-wrap align-items-center gap-3 small text-muted mb-4 pb-3">
+            <span class="d-flex align-items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+            </span>
+            {{ if .Params.author }}
+            <span class="d-flex align-items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <a href="{{ site.BaseURL }}authors/{{ .Params.author | urlize }}/" class="text-decoration-none">{{ .Params.author }}</a>
+            </span>
+            {{ end }}
+            {{ if .Params.readingTime }}
+            <span class="d-flex align-items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                {{ .Params.readingTime }} min read
+            </span>
+            {{ end }}
+            {{ if .Params.tags }}
+            <span class="d-flex align-items-center gap-1">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -2px;"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                {{ range .Params.tags }}
+                <a href="{{ site.BaseURL }}tags/{{ . | urlize }}/" class="badge bg-secondary text-decoration-none blog-tag">{{ . }}</a>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
+
+        <!-- Featured Image -->
+        {{ if .Params.image }}
+        <figure class="mb-4">
+            {{ $image := resources.Get .Params.image }}
+            {{ if $image }}
+                <img src="{{ $image.RelPermalink }}" alt="{{ .Title }}" class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
+            {{ else }}
+                <img src="{{ .Params.image }}" alt="{{ .Title }}" class="img-fluid rounded">
+            {{ end }}
+            {{ if .Params.imageAlt }}
+            <figcaption class="text-muted small mt-2">{{ .Params.imageAlt }}</figcaption>
+            {{ end }}
+        </figure>
+        {{ end }}
+
+        <!-- Post Content -->
+        <div data-prismjs-copy="" data-prismjs-copy-success="" data-prismjs-copy-error="">
+            {{ .Content }}
+        </div>
+
+        <!-- Git Info -->
+        {{ if and .GitInfo .Site.Params.docs.repoURL -}}
+            {{ partial (printf "%s/%s" ($.Scratch.Get "pathName") "gitinfo") . }}
+        {{ end -}}
+
+        <!-- Mermaid -->
+        {{ if .Page.Store.Get "hasMermaid" }}
+        {{ $mermaid := resources.Get (printf "%s/%s" ($.Scratch.Get "pathName") "js/mermaid.min.js") }}
+        {{ if hugo.IsProduction }}
+            {{ $mermaid = $mermaid | fingerprint "sha384" }}
+        {{ end }}
+        <script src="{{ $mermaid.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $mermaid.Data.Integrity }}"{{ end }}></script>
+        <script>
+            const config = {
+                startOnLoad:true,
+                logLevel: "error",
+                align: "center",
+                theme:"null"
+            };
+            mermaid.initialize(config);
+        </script>
+        {{ end }}
+
+        <!-- Feedback Widget -->
+        {{ if .Site.Params.feedback.enabled | default false -}}
+            {{ if or (.Site.Params.plausible.dataDomain) (.Site.Config.Services.GoogleAnalytics.ID) }}
+                {{- partial (printf "%s/%s" ($.Scratch.Get "pathName") "footer/feedback.html") . -}}
+            {{ else }}
+                {{ errorf "Either Google Analytics or Plausible Analytics must be configured before enabling the Feedback Widget." }}
+            {{ end }}
+        {{ end -}}
+
+        <!-- Back to Blog -->
+        <!-- <div class="mt-4">
+            <a href="/blog/" class="btn btn-outline-secondary">← Back to Blog</a>
+        </div> -->
+    </article>
+{{ end }}

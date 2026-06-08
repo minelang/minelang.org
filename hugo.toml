@@ -1,4 +1,4 @@
-baseURL = "https://www.minelang.org/"
+baseURL = "/"
 languageCode = "en-us"
 contentDir = "content"
 enableEmoji = true
@@ -74,6 +74,11 @@ title = "Mine Programming Language"
   name = "Documentation"
   url = "/docs/"
   weight = 20
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+  weight = 25
 
 [[menu.main]]
   name = "GitHub"
