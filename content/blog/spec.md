@@ -858,7 +858,7 @@ weight: 1
     >
     > `[A,B]` is a Multi-Type Tuple.
     >
-    > Both supports `.len` and `[index]`.
+    > Both support `.len` and `[index]`.
 
     ---
 
