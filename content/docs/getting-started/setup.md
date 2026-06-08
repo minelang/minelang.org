@@ -1,14 +1,12 @@
 ---
 title: Setup
-description: Setup and installation for the Mine programming language.
+description: Install Mine and set up your development environment.
 icon: downloading
 weight: 12
 ---
 
-At the moment, **Mine** is still being developed locally :(
+Mine is currently under active development, so installation packages and setup instructions are not yet available.
 
-Once the vision is complete and there is a solid foundation, I will share it and update this page accordingly.
+Once the language reaches a stable milestone and the core foundation is in place, this page will be updated with everything you need to install Mine and start building.
 
 ---
-
-_This page will be updated as the language evolves._

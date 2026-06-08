@@ -42,7 +42,3 @@ Welcome to Mine :3
 - ### Drafts
 
     > [Mine Language Specification](/blog/spec)
-
-    ---
-
-_This page will be updated as the language evolves._

@@ -1,15 +1,15 @@
 ---
 title: Hello World
-description: Write your first program using the Mine programming language.
+description: Write and run your first "Hello World" program in Mine.
 icon: terminal
 weight: 13
 ---
 
-Write a simple program that prints "Hello World!" to the standard output stream 🚀
+As tradition demands, let's start by printing **"Hello World!"** to the standard output 🚀
 
 ---
 
-1. Create a file called `main.mine` with the following code:
+1. Create a file named `main.mine` with the following code:
 
     ```mine
     fn main() {
@@ -17,13 +17,13 @@ Write a simple program that prints "Hello World!" to the standard output stream 
     }
     ```
 
-2. Use `mine run main.mine` command to build and run it.
+2. Build and run the program:
 
     ```bash
+    mine run main.mine
+
     # Output
     Hello World!
     ```
 
-    ---
-
-_This page will be updated as the language evolves._
+Congratulations! You've just written and executed your first Mine program 🎉
