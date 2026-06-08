@@ -5,6 +5,6 @@ icon: rocket_launch
 weight: 10
 ---
 
-Everything you need to begin using Mine, from installation and setup to writing and running your first program.
+This section will guide you through everything you need to get started with Mine, from setting up your development environment to writing and running your first program.
 
 ---
