@@ -827,14 +827,14 @@ weight: 1
     Functions return multiple values via tuples:
 
     ```mine
-    fn minMax(arr: []i32) [i32, i32] {
+    fn minMax(arr: []i32) .{i32, i32} {
         mut min = arr[0]
         mut max = arr[0]
         for v in arr {
             if v < min { min = v }
             if v > max { max = v }
         }
-        return [min, max]
+        return .{min, max}
     }
 
     let result = minMax(arr)
@@ -844,14 +844,6 @@ weight: 1
     // destructuring syntax is planned (see TODO):
     // let min, max = minMax(arr)
     ```
-
-    > `[T]` is an Array.
-    >
-    > `[T,]` is a Single-Type Tuple.
-    >
-    > `[A,B]` is a Multi-Type Tuple.
-    >
-    > Both support `.len` and `[index]`.
 
     ---
 
