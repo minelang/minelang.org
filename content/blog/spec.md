@@ -23,17 +23,17 @@ weight: 1
 
 - ## Primitives
 
-    | Type                        | Description                                                                               |
-    | --------------------------- | ----------------------------------------------------------------------------------------- |
-    | `iN`, `uN`                  | Signed/unsigned integers, arbitrary width (i1..i65535, u1..u65535)                        |
-    | `f16`, `f32`, `f64`, `f128` | Floating-point                                                                            |
-    | `bool`                      | `true` or `false`                                                                         |
-    | `void`                      | No value                                                                                  |
-    | `never`                     | Function never returns, body must diverge (infinite loop, `fail`, etc.)                   |
-    | `any`                       | Opts out of type checking, comptime-only (use sparingly)                                  |
-    | `type`                      | A type itself (comptime contexts)                                                         |
-    | `comptime_int`              | Untyped integer literal                                                                   |
-    | `comptime_float`            | Untyped float literal (f128 precision)                                                    |
+    | Type                        | Description                                                             |
+    | --------------------------- | ----------------------------------------------------------------------- |
+    | `iN`, `uN`                  | Signed/unsigned integers, arbitrary width (i1..i65535, u1..u65535)      |
+    | `f16`, `f32`, `f64`, `f128` | Floating-point                                                          |
+    | `bool`                      | `true` or `false`                                                       |
+    | `void`                      | No value                                                                |
+    | `never`                     | Function never returns, body must diverge (infinite loop, `fail`, etc.) |
+    | `any`                       | Opts out of type checking, comptime-only (use sparingly)                |
+    | `type`                      | A type itself (comptime contexts)                                       |
+    | `comptime_int`              | Untyped integer literal                                                 |
+    | `comptime_float`            | Untyped float literal (f128 precision)                                  |
 
     > **`never` example:** A function returning `never` must provably never return:
     > ```mine
@@ -536,6 +536,26 @@ weight: 1
     //     @printn(field.name)
     // }
     ```
+    
+    ---
+
+- ## Pipe Operator
+
+    The `|>` operator passes the result of the left expression as the last argument to the function on the right:
+
+    ```mine
+    let result = values |> filter(isPositive) |> map(double) |> sum
+    ```
+
+    It is left-associative and useful for chaining transformations without nesting:
+
+    ```mine
+    // Instead of:
+    let result = sum(map(filter(values, isPositive), double))
+
+    // Write:
+    let result = values |> filter(isPositive) |> map(double) |> sum
+    ```
 
     ---
 
@@ -660,8 +680,8 @@ weight: 1
 
         | Type   | Length | Indexable | Sliceable  |
         | ------ | ------ | --------- | ---------- |
-        | `*T`   | --      | ✗         | ✗          |
-        | `[*]T` | --      | ✓         | ✓ (manual) |
+        | `*T`   | --     | ✗         | ✗          |
+        | `[*]T` | --     | ✓         | ✓ (manual) |
         | `[]T`  | ✓      | ✓         | ✓          |
 
         > Use slices (`[]T`) whenever possible. Reach for `[*]T` only when interfacing with raw memory or external APIs where length is tracked separately.
@@ -751,6 +771,63 @@ weight: 1
     ```mine
     // line comment
     ```
+
+    ---
+
+- ## Sections
+
+    Named decorative markers that divide code into logical regions. Three levels of hierarchy are available. All formatting is handled automatically by Mine's LSP.
+
+    - ### Level 1
+
+        Used for major file divisions. Must be at module level.
+
+        ```mine
+        ╔════════════════════════════════════ NAME ════════════════════════════════════╗
+
+            let x = 0
+
+        ╚══════════════════════════════════════════════════════════════════════════════╝
+        ```
+
+    - ### Level 2
+
+        Used for subdivisions within a level 1 section. Every L2 must be contained within an L1.
+
+        ```mine
+        ┌──────────────────────────────── NAME ──────────────────────────────────────┐
+
+            let x = 0
+
+        └────────────────────────────────────────────────────────────────────────────┘
+        ```
+
+    - ### Level 3
+
+        Used for smaller logical regions. Free-form can be used anywhere (inside L1, L2, functions, code blocks).
+
+        ```mine
+        ╭── Name ────────────────────────────────────────────────────────────────────╮
+
+            let x = 0
+
+        ╰────────────────────────────────────────────────────────────────────────────╯
+        ```
+
+    - ### Nesting rules
+
+        | Pattern       | Valid?           |
+        | ------------- | ---------------- |
+        | L1            | ✓ (module level) |
+        | L1 → L2       | ✓                |
+        | L1 → L3       | ✓ (L2 optional)  |
+        | L1 → L2 → L3  | ✓                |
+        | Function → L3 | ✓ (anywhere)     |
+        | L2 without L1 | ✗                |
+
+    - ### Naming conventions
+
+        L1 and L2 names must be UPPERCASE. Common L1 names: `PACK`, `CONST`, `TYPE`, `CORE`. Common L2 names: `INIT`, `MAIN`, `HELP`. L3 names can be any case (free form).
 
     ---
 
@@ -856,4 +933,3 @@ weight: 1
     - ⚠️ String formatting full spec (`@print`/`std.fmt` format strings)
     - Standard library API
     - Memory allocator design
-    
