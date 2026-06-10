@@ -614,6 +614,11 @@ weight: 1
     for i in 0..10  {..} // 0 to 9 (exclusive)
     for i in 0..=10 {..} // 0 to 10 (inclusive)
     for i in 10..=0 {..} // 10 to 0 (descending, step inferred from direction)
+
+    // with step (default is 1 or -1 depending on direction)
+    for i in 0..10 by 2 {..}  // 0, 2, 4, 6, 8
+    for i in 0..=10 by 2 {..} // 0, 2, 4, 6, 8, 10
+    for i in 10..=0 by -1{..} // 10, 9, ..., 0
     ```
 
     - ### Custom iterators
