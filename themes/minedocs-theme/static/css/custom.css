@@ -3,7 +3,7 @@
     --body-bg: #151515;
     --block-bg: #121212;
     --sidebar-bg: var(--block-bg);
-    --prism-code-bg: var(--block-bg) !important;
+    /* --prism-code-bg: var(--block-bg) !important; */
     --top-header-bg: var(--block-bg);
 }
 
