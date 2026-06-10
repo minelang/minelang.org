@@ -1,10 +1,28 @@
 /* Custom global styles */
 :root{
-    --body-bg: #131418;
-    --sidebar-bg: #131418;
-    --prism-code-bg: #1a1b1b !important;
+    --body-bg: #151515;
+    --sidebar-bg: #121212;
+    --prism-code-bg: #121212 !important;
     --content-link-color: var(--blue-300);
-    --top-header-bg: hsl(240, 8%, 9%, 0.8);
+    --top-header-bg: #12121299;
+}
+
+.sidebar-wrapper {
+    background: var(--sidebar-bg) !important;
+    border-right: 1px solid var(--sidebar-border-color);
+}
+
+.sidebar-wrapper > div {
+    background: inherit !important;
+    border-right: none !important;
+}
+
+.page-wrapper .sidebar-wrapper .sidebar-brand {
+    background: var(--top-header-bg) !important;
+}
+
+.sidebar-footer {
+    /* display: none !important; */
 }
 
 body {
