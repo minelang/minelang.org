@@ -103,15 +103,13 @@ function activateMenu() {
 function activateSidebarMenu() {
     var current = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
     if (current !== "" && document.getElementById("sidebar")) {
-        var menuItems = document.querySelectorAll('#sidebar button');
+        var menuItems = document.querySelectorAll('#sidebar .sidebar-folder-link');
         for (var i = 0, len = menuItems.length; i < len; i++) {
             if (menuItems[i].getAttribute("href").indexOf(current) !== -1) {
-                menuItems[i].parentElement.className += " active";
-                if (menuItems[i].closest(".sidebar-submenu")) {
-                    menuItems[i].closest(".sidebar-submenu").classList.add("d-block");
-                }
-                if (menuItems[i].closest(".sidebar-dropdown")) {
-                    menuItems[i].closest(".sidebar-dropdown").classList.add("active");
+                menuItems[i].closest(".sidebar-dropdown").classList.add("active");
+                var submenu = menuItems[i].closest(".sidebar-dropdown").querySelector(".sidebar-submenu");
+                if (submenu) {
+                    submenu.classList.add("d-block");
                 }
             }
         }
@@ -129,7 +127,7 @@ if (!window.matchMedia('(min-width: 1024px)').matches) {
     if (document.getElementById("close-sidebar")) {
         const closeSidebar = document.getElementById("close-sidebar");
         const sidebar = document.getElementById("sidebar");
-        const sidebarMenuLinks = Array.from(document.querySelectorAll(".sidebar-root-link,.sidebar-nested-link"));
+        const sidebarMenuLinks = Array.from(document.querySelectorAll(".sidebar-root-link,.sidebar-nested-link,.sidebar-folder-link"));
         // Close sidebar by clicking outside
         document.addEventListener('click', function(elem) {
             if (!closeSidebar.contains(elem.target) && !sidebar.contains(elem.target))
@@ -158,17 +156,11 @@ if (document.getElementById("navigation")) {
 }
 
 if (document.getElementById("sidebar")) {
-    var elements = document.getElementById("sidebar").getElementsByTagName("button");
+    var elements = document.getElementById("sidebar").querySelectorAll(".sidebar-toggle-btn");
     for (var i = 0, len = elements.length; i < len; i++) {
         elements[i].onclick = function (elem) {
-            // if(elem.target !== document.querySelectorAll("li.sidebar-dropdown.active > a")[0]){
-            //     document.querySelectorAll("li.sidebar-dropdown.active")[0]?.classList?.toggle("active");
-            //     document.querySelectorAll("div.sidebar-submenu.d-block")[0]?.classList?.toggle("d-block");
-            // }
-            // if(elem.target.getAttribute("href") === "javascript:void(0)") {
-            elem.target.parentElement.classList.toggle("active");
-            elem.target.nextElementSibling.classList.toggle("d-block");
-            // }
+            elem.target.closest(".sidebar-dropdown").classList.toggle("active");
+            elem.target.closest(".sidebar-dropdown").querySelector(".sidebar-submenu").classList.toggle("d-block");
         }
     }
 }

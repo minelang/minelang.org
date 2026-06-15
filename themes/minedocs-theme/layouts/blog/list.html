@@ -17,9 +17,6 @@
                         {{ partial "relative-time" (dict "date" .Date) }}
                     </span>
                 </div>
-                {{ if .Params.description }}
-                <p class="small text-muted mb-1 mt-1">{{ .Params.description | markdownify }}</p>
-                {{ end }}
                 {{ if or .Params.tags .Params.author }}
                 <div class="d-flex align-items-center gap-2 small text-muted flex-wrap">
                     {{ if .Params.tags }}

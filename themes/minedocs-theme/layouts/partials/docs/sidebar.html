@@ -17,48 +17,60 @@
                     {{ if or (.Sections) (.Pages) }}
                     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                         <li class="sidebar-dropdown {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
-                            <button class="btn">
-                                {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                    <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
-                                {{ end }}
-                                {{- .Title }}
-                            </button>
+                            <div class="sidebar-folder-row">
+                                <a href="{{ .Permalink }}" class="sidebar-folder-link">
+                                    {{ if eq .Site.Params.docs.sidebarIcons true -}}
+                                        <i class="material-icons me-2">{{- .Params.icon | default "notes" }}</i>
+                                    {{ end }}
+                                    {{- .Title }}
+                                </a>
+                                <button class="sidebar-toggle-btn" aria-label="Toggle submenu"></button>
+                            </div>
                             <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
                                 <ul>
                                     {{ range .Pages }}
                                         {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                                         {{ if .IsSection }}
                                             <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
-                                                <button class="btn">
-                                                    {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                        <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
-                                                    {{ end }}
-                                                    {{- .Title }}
-                                                </button>
+                                                <div class="sidebar-folder-row">
+                                                    <a href="{{ .Permalink }}" class="sidebar-folder-link">
+                                                        {{ if eq .Site.Params.docs.sidebarIcons true -}}
+                                                            <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
+                                                        {{ end }}
+                                                        {{- .Title }}
+                                                    </a>
+                                                    <button class="sidebar-toggle-btn" aria-label="Toggle submenu"></button>
+                                                </div>
                                                 <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
                                                     <ul>
                                                         {{ range .Pages }}
                                                             {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                                                             {{ if .IsSection }}
                                                                 <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
-                                                                    <button class="btn">
-                                                                        {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                                            <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
-                                                                        {{ end }}
-                                                                        {{- .Title }}
-                                                                    </button>
+                                                                    <div class="sidebar-folder-row">
+                                                                        <a href="{{ .Permalink }}" class="sidebar-folder-link">
+                                                                            {{ if eq .Site.Params.docs.sidebarIcons true -}}
+                                                                                <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
+                                                                            {{ end }}
+                                                                            {{- .Title }}
+                                                                        </a>
+                                                                        <button class="sidebar-toggle-btn" aria-label="Toggle submenu"></button>
+                                                                    </div>
                                                                     <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
                                                                         <ul>
                                                                             {{ range .Pages }}
                                                                                 {{ $active := in $currentPage.RelPermalink .RelPermalink }}
                                                                                 {{ if .IsSection }}
                                                                                     <li class="sidebar-dropdown nested {{ if eq .Site.Params.docs.sidebarIcons true -}}{{ else }}no-icon{{ end }} {{ if $active }}current active{{ end }}">
-                                                                                        <button class="btn">
-                                                                                            {{ if eq .Site.Params.docs.sidebarIcons true -}}
-                                                                                                <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
-                                                                                            {{ end }}
-                                                                                            {{- .Title }}
-                                                                                        </button>
+                                                                                        <div class="sidebar-folder-row">
+                                                                                            <a href="{{ .Permalink }}" class="sidebar-folder-link">
+                                                                                                {{ if eq .Site.Params.docs.sidebarIcons true -}}
+                                                                                                    <!-- <span class="material-icons me-2">{{- .Params.icon }}</span> -->
+                                                                                                {{ end }}
+                                                                                                {{- .Title }}
+                                                                                            </a>
+                                                                                            <button class="sidebar-toggle-btn" aria-label="Toggle submenu"></button>
+                                                                                        </div>
                                                                                         <div class="sidebar-submenu {{ if $active }}d-block{{ end }}">
                                                                                             <ul>
                                                                                                 {{ range .Pages }}
