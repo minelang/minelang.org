@@ -127,9 +127,9 @@ Unlike structs, classes are constructed by calling the type as a function `Class
         Self(pub let value: T) {}
     }
 
-    let b1 = Box<i32>(42)   // T -> i32          (explicit)
-    let b2 = Box(42)        // T -> comptime_int (inferred)
-    let b2 = Box(42 as i32) // T -> i32          (explicit + inferred)
+    let b1 = Box<i32>(42)   // T -> i32 (explicit)
+    let b2 = Box(42)        // T -> int (inferred)
+    let b2 = Box(42 as i32) // T -> i32 (explicit + inferred)
     ```
 
     ---

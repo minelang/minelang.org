@@ -11,7 +11,7 @@ Literal values include integers (decimal/hex/octal/binary), floats, booleans, st
 - ## Integer literals
 
     ```mine
-    42                  // decimal (comptime_int)
+    42                  // decimal (int)
     0xFF                // hex
     0o77                // octal
     0b1010              // binary
@@ -20,7 +20,7 @@ Literal values include integers (decimal/hex/octal/binary), floats, booleans, st
     Untyped until pinned:
 
     ```mine
-    let x = 42          // comptime_int
+    let x = 42          // int
     let x: i64 = 42     // i64
     let x = 42 as i32   // i32
     ```
@@ -30,8 +30,8 @@ Literal values include integers (decimal/hex/octal/binary), floats, booleans, st
 - ## Float literals
 
     ```mine
-    3.14                // comptime_float
-    1e10                // comptime_float (scientific-notation)
+    3.14                // float
+    1e10                // float (scientific-notation)
     let x = 3.14 as f32 // f32
     ```
 
@@ -60,7 +60,7 @@ Literal values include integers (decimal/hex/octal/binary), floats, booleans, st
 - ## Character
 
     ```mine
-    'A'                 // comptime_int
+    'A'                 // int
     let c = 'A' as u8   // u8
     ```
 
@@ -80,7 +80,7 @@ Literal values include integers (decimal/hex/octal/binary), floats, booleans, st
 - ## Tuple literals
 
     ```mine
-    .{1, 2, 3}          // .{ comptime_int, comptime_int, comptime_int }
+    .{1, 2, 3}          // .{ int, int, int }
     .{x}                // single-element tuple
     .{x,}               // trailing comma
     .{}                 // empty

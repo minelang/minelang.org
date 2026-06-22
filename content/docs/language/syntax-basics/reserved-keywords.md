@@ -32,7 +32,7 @@ defer errdefer use from test bench asm
 
 // ...
 null undefined true false never void bool any anyerror
-anytype anyframe anyopaque type mod comptime_int comptime_float
+anytype anyframe anyopaque type mod int comptime_int float comptime_float
 
 // ...
 pub prv static inline comptime volatile

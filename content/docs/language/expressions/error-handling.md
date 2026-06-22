@@ -39,11 +39,14 @@ weight: 174
 
 - ## orelse
 
-    `orelse` unwraps an optional, providing a fallback for `null`.
+    `orelse` unwraps an optional, providing a fallback for `null`. The symbolic form `??` is also accepted and behaves identically.
 
     ```mine
     let y = x orelse 0
+    let z = x ?? 0 // same as `x orelse 0`
     ```
+
+    The AST records which form was used via a `symbolic` flag on the `OrElseExprNode`.
 
     ---
 

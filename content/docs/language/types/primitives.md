@@ -4,7 +4,7 @@ icon: 123
 weight: 130
 ---
 
-Built-in types include signed and unsigned integers (i1-u65535), floats (f16-f128), bool, void, never, module, type, comptime_int/float, any/anyerror/anyopaque, and C ABI types.
+Built-in types include signed and unsigned integers (i1-u65535), floats (f16-f128), bool, void, never, module, type, int/float, any/anyerror/anyopaque, and C ABI types.
 
 ---
 
@@ -30,6 +30,7 @@ Built-in types include signed and unsigned integers (i1-u65535), floats (f16-f12
   | f16  | 16-bit IEEE  |
   | f32  | 32-bit IEEE  |
   | f64  | 64-bit IEEE  |
+  | f80  | 80-bit IEEE  |
   | f128 | 128-bit IEEE |
 
   ---
@@ -79,12 +80,13 @@ Built-in types include signed and unsigned integers (i1-u65535), floats (f16-f12
 
     ---
 
-- ## Comptime
+- ## Int / Float
 
-    - `comptime_int` - the type of an untyped integer literal. Has arbitrary precision at compile time. coerces to any integer type that can hold its value.
+    `int` — the type of an untyped integer literal. Has arbitrary precision at compile time. Coerces to any integer type that can hold its value.
 
-    - `comptime_float` - the type of an untyped float literal. Coerces to any float type.
+    `float` — the type of an untyped float literal. Coerces to any float type.
 
+    > `comptime_int` and `comptime_float` are deprecated aliases for `int` and `float`. The formatter will auto-fix them.
 
     ---
 

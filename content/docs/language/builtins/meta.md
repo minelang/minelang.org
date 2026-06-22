@@ -130,3 +130,65 @@ _Note: For `typeof` and type coercion, see the [Introspection Expressions](../ex
         ```
 
         ---
+
+- ## Enum/Union Helpers
+
+    - ### `@tagName`
+
+        ```mine
+        /// ...
+        @tagName(value: any) []u8
+        ```
+
+        ```mine
+        let name = @tagName(HttpStatus.Ok) // -> "Ok"
+        ```
+
+        Returns the string name of an enum variant.
+
+        ---
+
+    - ### `@intFromEnum`
+
+        ```mine
+        /// ...
+        @intFromEnum(value: any) any
+        ```
+
+        ```mine
+        let n = @intFromEnum(HttpStatus.Ok) // -> 200
+        ```
+
+        Converts an enum value to its integer tag value.
+
+        ---
+
+    - ### `@enumFromInt`
+
+        ```mine
+        /// ...
+        @enumFromInt(comptime T: type, value: any) T
+        ```
+
+        ```mine
+        let s = @enumFromInt(HttpStatus, 404) // -> HttpStatus.NotFound
+        ```
+
+        Converts an integer to an enum value (checked at runtime).
+
+        ---
+
+    - ### `@unionInit`
+
+        ```mine
+        /// ...
+        @unionInit(comptime T: type, comptime field: []u8, value: any) T
+        ```
+
+        ```mine
+        let u = @unionInit(Shape, "Circle", { .radius = 5.0 })
+        ```
+
+        Initializes a union when the active field name is only known at compile time.
+
+        ---

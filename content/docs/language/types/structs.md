@@ -253,7 +253,7 @@ Structs are product types with named fields. Support default values, mutable fie
     }
 
     let p1 = Pair<i32> { .a = 1, .b = 2 }   // T is explicitly i32
-    let p2 = Pair      { .a = 1, .b = 2 }   // T inferred as comptime_int
+    let p2 = Pair      { .a = 1, .b = 2 }   // T inferred as int
 
     let x: i64 = some_value
     let y: i32 = some_value

@@ -61,6 +61,19 @@ Operators cover arithmetic, comparison, logical (and/or/not), bitwise, overflow-
 
     ---
 
+- ## Orelse / Null Coalescing
+
+    `orelse` unwraps an optional, providing a fallback for `null`. The symbolic form `??` is also accepted and behaves identically:
+
+    ```mine
+    let y = x orelse 0   // keyword form
+    let z = x ?? 0       // symbolic alias (same as `orelse`)
+    ```
+
+    The AST records which form was used via a `symbolic` flag on the `OrElseExprNode`.
+
+    ---
+
 - ## Bitwise
 
     C-style symbols:

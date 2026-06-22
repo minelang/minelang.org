@@ -31,7 +31,7 @@ Generics allow type parameterization with `<T>` syntax. Both functions and type 
     Type inference is preferred (explicit `<T>` at the call site also works):
 
     ```mine
-    let x = identity(42)          // T -> comptime_int (inferred)
+    let x = identity(42)          // T -> int (inferred)
     let x = identity<i32>(42)     // T -> i32 (explicit)
     let x = identity(42 as i32)   // T -> i32
     ```
@@ -75,7 +75,7 @@ Generics allow type parameterization with `<T>` syntax. Both functions and type 
     let Box<T> = class {
         Self(pub value: T) {}
     }
-    let b = Box(42)         // T -> comptime_int (inferred)
+    let b = Box(42)         // T -> int (inferred)
     let b = Box<i32>(42)    // T -> i32 (explicit)
     let b = Box(42 as i32)  // T -> i32
     ```
