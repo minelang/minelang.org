@@ -11,7 +11,7 @@
 
 [data-dark-mode] {
     --toc-link-hover-bg-color: var(--gray-700);
-    --toc-mobile-btn-bg-color: var(--gray-900);
+    --toc-mobile-btn-bg-color: #1b1b1b;
     --toc-mobile-menu-bg-color: var(--body-bg);
     --toc-mobile-link-hover-color: var(--primary-300);
 }
@@ -78,7 +78,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 6rem;
-    height: calc(100vh - 11.1rem);
+    height: calc(100vh - 8rem);
     overflow-y: auto;
     order: 2;
 

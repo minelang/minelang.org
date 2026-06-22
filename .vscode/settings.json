@@ -14,7 +14,9 @@
         "go.mod": true,
         "go.sum": true,
         "README.md": true,
-        "assets": true
+        "assets": true,
+        "public": true,
+        "resources": true
     },
     "hide-files.files": [
         ".vscode",
@@ -26,6 +28,8 @@
         "go.mod",
         "go.sum",
         "README.md",
-        "assets"
+        "assets",
+        "public",
+        "resources"
     ]
 }

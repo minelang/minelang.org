@@ -2,7 +2,7 @@
 title: Welcome
 description: Important notes, development status, and helpful resources.
 icon: waving_hand
-weight: 11
+weight: 10
 ---
 
 Welcome to Mine :3
@@ -38,7 +38,3 @@ Welcome to Mine :3
     > The first official **self-hosted** release (written and compiled entirely by Mine) is the long-term goal 🌟
 
     ---
-
-- ### Drafts
-
-    > [Mine Language Specification](/blog/spec)

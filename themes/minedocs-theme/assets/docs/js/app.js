@@ -249,3 +249,18 @@ var sanitizeHTML = function (str) {
 		return '&#' + c.charCodeAt(0) + ';';
 	});
 };
+
+// Sidebar scroll persistence, preserves position across page navigations
+// Supports arbitrary nesting depth (section 17 → sub-section 10 → ...)
+(function () {
+    var el = document.querySelector('.sidebar-content');
+    if (!el) return;
+    var key = 'sidebar-scroll';
+    var saved = sessionStorage.getItem(key);
+    if (saved) {
+        el.scrollTop = parseInt(saved, 10);
+    }
+    window.addEventListener('beforeunload', function () {
+        sessionStorage.setItem(key, el.scrollTop);
+    });
+})();

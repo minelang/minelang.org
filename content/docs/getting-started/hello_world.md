@@ -2,14 +2,14 @@
 title: Hello World
 description: Write and run your first "Hello World" program in Mine.
 icon: terminal
-weight: 13
+weight: 12
 ---
 
 As tradition demands, let's start by printing **"Hello World!"** to the standard output 🚀
 
 ---
 
-1. Create a file named `main.mine` with the following code:
+1. Create a file named `main.m` or `main.mine` with the following code:
 
     ```mine
     fn main() {
@@ -20,10 +20,12 @@ As tradition demands, let's start by printing **"Hello World!"** to the standard
 2. Build and run the program:
 
     ```bash
-    mine run main.mine
+    mine run main.m
 
     # Output
     Hello World!
     ```
 
 Congratulations! You've just written and executed your first Mine program 🎉
+
+---

@@ -141,7 +141,7 @@
                     i {
                         min-width: 36px;
                         height: 36px;
-                        background-color: var(--sidebar-icon-bg);
+                        background-color: var(--sidebar-icon-bg) !important;
                         display: inline-flex !important;
                         align-items: center;
                         justify-content: center;

@@ -144,12 +144,12 @@
 }
 
 .alert-info {
-    background-color: var(--alert-info-bg);
-    border-color: var(--alert-info-border-color);
+    background-color: var(--alert-default-bg);
+    border-color: var(--alert-default-border-color);
     color: var(--text-default);
 
     > .alert-icon span {
-        color: var(--alert-info-icon-color);
+        color: var(--alert-default-icon-color);
         margin-top: 0.15rem;
     }
 }

@@ -409,7 +409,7 @@ mark, ::selection {
     color: #babdc4;
     background: #2d2d2d;
 } */
-p > code, td > code, li > code, h1 > code, h2 > code, h3 > code, h4 > code, h5 > code, h1 > code, strong > code {
+p > code, td > code, li > code, h1 > code, h2 > code, h3 > code, h4 > code, h5 > code, h1 > code, strong > code, a > code, em > code {
     font-size: .9em !important;
     padding: 1px 3px !important;
     position: relative Im !important;
@@ -440,11 +440,24 @@ pre code {
 
 a:hover, a:active { text-decoration: underline !important; }
 
-ul li a, ul li a:hover, ul li a:active,
+ul li > a, ul li > a:hover, ul li > a:active,
+.sidebar-folder-link, .sidebar-folder-link:hover, .sidebar-folder-link:active,
 .btn-outline-primary,.btn-outline-primary:hover, .btn-outline-primary:active,
 .sidebar-nested-link,.sidebar-nested-link:hover, .sidebar-nested-link:active,
 .sidebar-root-link,.sidebar-root-link:hover, .sidebar-root-link:active {
     text-decoration: none !important;
+}
+
+h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a
+{
+    color: var(--text-light) !important;
+}
+
+h1 > a:hover, h2 > a:hover, h3 > a:hover, h4 > a:hover, h5 > a:hover, h6 > a:hover,
+h1 > a:active, h2 > a:active, h3 > a:active, h4 > a:active, h5 > a:active, h6 > a:active
+{
+    color: var(--text-light) !important;
+    text-decoration: underline !important;
 }
 
 .blog-post-summary {
@@ -457,4 +470,13 @@ ul li a, ul li a:hover, ul li a:active,
 span.placeholder {
     background-color: inherit !important;
     cursor: inherit !important;
+}
+
+.docs-content .main-content p > a, .docs-content .main-content li > a,
+.docs-content .main-content em > a, .docs-content .main-content em > a {
+    text-decoration: underline !important;
+}
+
+table td:nth-of-type(1) {
+        text-wrap-mode: nowrap;
 }
