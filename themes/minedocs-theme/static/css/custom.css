@@ -409,7 +409,7 @@ mark, ::selection {
     color: #babdc4;
     background: #2d2d2d;
 } */
-p > code, td > code, li > code, h1 > code, h2 > code, h3 > code, h4 > code, h5 > code, h1 > code, strong > code, a > code, em > code {
+p > code, td > code, li > code, h1 > code, h2 > code, h3 > code, h4 > code, h5 > code, h1 > code, strong > code, a > code, em > code, th > code, tr > code {
     font-size: .9em !important;
     padding: 1px 3px !important;
     position: relative Im !important;

@@ -16,7 +16,9 @@
         "README.md": true,
         "assets": true,
         "public": true,
-        "resources": true
+        "resources": true,
+        "themes": true,
+        "hugo.toml": true
     },
     "hide-files.files": [
         ".vscode",
@@ -30,6 +32,8 @@
         "README.md",
         "assets",
         "public",
-        "resources"
+        "resources",
+        "themes",
+        "hugo.toml"
     ]
 }
