@@ -3,6 +3,7 @@
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
+        "**/.jj": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
         ".vscode": true,
@@ -13,11 +14,6 @@
         ".gitmodules": true,
         "go.mod": true,
         "go.sum": true,
-        "README.md": true,
-        "assets": true,
-        "public": true,
-        "resources": true,
-        "themes": true,
         "hugo.toml": true
     },
     "hide-files.files": [
@@ -29,11 +25,6 @@
         ".gitmodules",
         "go.mod",
         "go.sum",
-        "README.md",
-        "assets",
-        "public",
-        "resources",
-        "themes",
         "hugo.toml"
     ]
 }

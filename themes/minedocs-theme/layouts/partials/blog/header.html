@@ -2,7 +2,7 @@
     <div class="header-bar d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center gap-4">
             <a href="{{ relLangURL "" }}" class="logo-icon" style="display: flex; align-items: center;">
-                <img src="{{ "/images/mine-logo.svg" | relURL }}" class="invert" alt="Mine Logo" style="width: 32px; height: 32px;">
+                {{ partial "mine-logo.html" (dict "width" 32 "height" 32) }}
             </a>
             <div style="height: 20px; width: 1px; border-left: 1px solid var(--sidebar-border-color);"></div>
             <a href="{{ "/docs" | relURL }}" class="nav-text-link">Docs</a>

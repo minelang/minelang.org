@@ -1,0 +1,5 @@
+{{- $logo := resources.Get "imgs/mine.svg" -}}
+{{- $class := .class | default "" -}}
+{{- $width := .width | default 32 -}}
+{{- $height := .height | default 32 -}}
+<img src="{{ $logo.RelPermalink }}" class="mine-logo{{ with $class }} {{ . }}{{ end }}" alt="Mine logo" width="{{ $width }}" height="{{ $height }}">

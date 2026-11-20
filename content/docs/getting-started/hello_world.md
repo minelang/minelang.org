@@ -12,8 +12,8 @@ As tradition demands, let's start by printing **"Hello World!"** to the standard
 1. Create a file named `main.m` or `main.mine` with the following code:
 
     ```mine
-    fn main() {
-        @printn("Hello World!")
+    pub fn main() {
+        @print("Hello World!\n")
     }
     ```
 

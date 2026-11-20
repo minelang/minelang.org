@@ -20,7 +20,7 @@
                         <div class="header-bar d-flex justify-content-between align-items-center">
                             <div class="d-flex align-items-center gap-4">
                                 <a href="{{ relLangURL "" }}" class="logo-icon" style="display: flex; align-items: center;">
-                                    <img src="{{ "/images/mine-logo.svg" | relURL }}" class="invert" alt="Mine Logo" style="width: 32px; height: 32px;">
+                                    {{ partial "mine-logo.html" (dict "width" 32 "height" 32) }}
                                 </a>
                                 <div style="height: 20px; width: 1px; border-left: 1px solid var(--sidebar-border-color);"></div>
                                 <a href="{{ "/docs" | relURL }}" class="nav-text-link">Docs</a>
@@ -63,12 +63,12 @@
                         <div class="layout-spacing">
                             <!-- Hero Section -->
                             <div class="hero-landing text-center py-5 my-5">
-                                <h1 class="display-3 fw-bold mb-3">
-                                    <img alt="Mine Logo" class="invert" src="{{ "/images/mine-logo.svg" | relURL }}" style="width: 100px; height: 60px; margin-bottom: 20px;">
+                                <h1 class="display-3 fw-bold mb-3 d-flex justify-content-center">
+                                    {{ partial "mine-logo.html" (dict "class" "mine-logo--hero" "width" 240 "height" 240) }}
                                 </h1>
-                                <p class="lead text-muted mb-4">General-purpose, explicit by design, delightful by experience.</p>
-                                <div class="mb-4">
-                                    <span class="badge bg-warning text-dark fs-6 px-3 py-2">
+                                <p class="lead text-muted mb-4">A general-purpose programming language and toolchain.</p>
+                                <div class="mb-4" style="height: 40px;">
+                                    <span class="badge bg-warning text-dark fs-6 px-3 py-2 mine-status-badge" style="height: 100%; align-content: center;">
                                         <i class="material-icons" style="vertical-align: middle; font-size: 18px;">build</i>
                                         Under Development
                                     </span>

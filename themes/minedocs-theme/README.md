@@ -3,7 +3,7 @@
 <br>
 <div align="center">
     <p>
-        <img src="./assets/imgs/mine.png" alt="logo" style="" height="90" />
+        <img src="../../assets/imgs/mine.svg" alt="Mine logo" height="90" />
     </p>
 </div>
 
@@ -11,6 +11,7 @@
     <p align="center" style="font-style:italic; color:gray;">
         <b>Mine Programming Language Website Theme.</b>
         <br>
+        Canonical logo: <code>../../assets/imgs/mine.svg</code>
     </p>
     <a href="https://minelang.org"><img src="https://img.shields.io/badge/Home-blue"/></a>
     <a href="https://minelang.org/docs"><img src="https://img.shields.io/badge/Docs-green"/></a>
